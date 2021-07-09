@@ -2,14 +2,14 @@ import PropTypes from 'prop-types';
 import React, {
   PureComponent,
 } from 'react';
-import styles from './styles.module.scss';
+import HeroBanner from './common/HeroBanner';
 
 class MainLayout extends PureComponent {
   render () {
     return (
-      <div className={styles['main-layout']}>
-        ubeshi
-      </div>
+      <>
+        <HeroBanner />
+      </>
     );
   }
 }

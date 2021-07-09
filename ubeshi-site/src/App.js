@@ -5,6 +5,7 @@ import {
   BrowserRouter as Router, Route,
 } from 'react-router-dom';
 import MainLayout from './MainLayout';
+import './App.css';
 
 class App extends PureComponent {
   render () {
