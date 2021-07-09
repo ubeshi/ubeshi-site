@@ -1,25 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import React, {
+  PureComponent,
+} from 'react';
+import {
+  BrowserRouter as Router, Route,
+} from 'react-router-dom';
+import MainLayout from './MainLayout';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends PureComponent {
+  render () {
+    return (
+      <div id='app'>
+        <Router>
+          <Route component={MainLayout} path='/' />
+        </Router>
+      </div>
+    );
+  }
 }
 
 export default App;
