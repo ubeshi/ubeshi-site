@@ -1,25 +1,67 @@
 import PropTypes from 'prop-types';
+import gsap, { Power0 } from 'gsap';
 import React, {
   PureComponent,
 } from 'react';
 import mascot from '../../assets/mascot.gif';
+import cloudone from '../../assets/cloud-1.png';
+import cloudtwo from '../../assets/cloud-2.png';
 import styles from './styles.module.scss';
 
 class MainLayout extends PureComponent {
+  componentDidMount() {
+    gsap.from(this.mascot, 1.5, {
+      ease: Power0,
+      y: 100,
+      yoyo: true,
+      repeat: -1,
+    });
+    gsap.to(this.cloudone, 10, {
+      ease: 'none',
+      x: 3000,
+      repeat: -1,
+    });
+    gsap.to(this.cloudtwo, 8, {
+      ease: 'none',
+      x: 4000,
+      repeat: -1,
+    });
+  }
+
   render () {
     return (
       <div className={styles['hero-banner']}>
         <div className={styles.logo}>ubeshi</div>
-        <img className={styles['hero-main-image']} src={mascot} />
+        <img
+          className={styles['hero-main-image']}
+          ref={(element) => {
+            this.mascot = element;
+          }}
+          src={mascot}
+        />
+        <img
+          className={styles['cloud-1']}
+          ref={(element) => {
+            this.cloudone = element;
+          }}
+          src={cloudone}
+        />
+        <img
+          className={styles['cloud-2']}
+          ref={(element) => {
+            this.cloudtwo = element;
+          }}
+          src={cloudtwo}
+        />
         <div className={styles['banner-text']}>
           <div className={styles['banner-text-left']}>
-            Sexy Potato
+            Big, Bright
             <div className={styles['supporting-text']}>
               Innovation, beauty &amp; excellence
             </div>
           </div>
           <div className={styles['banner-text-right']}>
-            for the Family
+            &amp; Ube- tiful
           </div>
         </div>
         <svg
