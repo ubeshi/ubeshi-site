@@ -1,30 +1,32 @@
+import gsap, {
+  Power0,
+} from 'gsap';
 import PropTypes from 'prop-types';
-import gsap, { Power0 } from 'gsap';
 import React, {
   PureComponent,
 } from 'react';
-import mascot from '../../assets/mascot.gif';
 import cloudone from '../../assets/cloud-1.png';
 import cloudtwo from '../../assets/cloud-2.png';
+import mascot from '../../assets/mascot.gif';
 import styles from './styles.module.scss';
 
 class MainLayout extends PureComponent {
-  componentDidMount() {
+  componentDidMount () {
     gsap.from(this.mascot, 1.5, {
       ease: Power0,
+      repeat: -1,
       y: 100,
       yoyo: true,
-      repeat: -1,
     });
     gsap.to(this.cloudone, 10, {
       ease: 'none',
-      x: 3000,
       repeat: -1,
+      x: 3000,
     });
     gsap.to(this.cloudtwo, 8, {
       ease: 'none',
-      x: 4000,
       repeat: -1,
+      x: 4000,
     });
   }
 
