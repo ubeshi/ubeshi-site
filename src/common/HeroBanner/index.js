@@ -35,6 +35,7 @@ class MainLayout extends PureComponent {
       <div className={styles['hero-banner']}>
         <div className={styles.logo}>ubeshi</div>
         <img
+          alt='Main ube'
           className={styles['hero-main-image']}
           ref={(element) => {
             this.mascot = element;
@@ -42,6 +43,7 @@ class MainLayout extends PureComponent {
           src={mascot}
         />
         <img
+          alt='Cloud One'
           className={styles['cloud-1']}
           ref={(element) => {
             this.cloudone = element;
@@ -49,6 +51,7 @@ class MainLayout extends PureComponent {
           src={cloudone}
         />
         <img
+          alt='Cloud two'
           className={styles['cloud-2']}
           ref={(element) => {
             this.cloudtwo = element;
