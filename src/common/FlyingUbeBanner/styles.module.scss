@@ -1,0 +1,22 @@
+.hero-main-image {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  height: 50%;
+}
+
+.cloud-1 {
+  position: absolute;
+  height: 50%;
+  top: 100px;
+  left: -500px;
+}
+
+.cloud-2 {
+  position: absolute;
+  height: 50%;
+  top: 200px;
+  left: -500px;
+  z-index: -10px;
+}
+
