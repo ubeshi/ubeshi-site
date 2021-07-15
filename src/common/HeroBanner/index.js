@@ -1,5 +1,3 @@
-
-import PropTypes from 'prop-types';
 import {
   PureComponent,
 } from 'react';
@@ -54,11 +52,5 @@ class HeroBanner extends PureComponent {
     );
   }
 }
-
-HeroBanner.propTypes = {
-  location: PropTypes.shape({
-    pathname: PropTypes.string,
-  }).isRequired,
-};
 
 export default HeroBanner;

@@ -1,7 +1,9 @@
 import gsap, {
   Power0,
 } from 'gsap';
-import PropTypes from 'prop-types';
+import {
+  ScrollTrigger,
+} from 'gsap/ScrollTrigger';
 import React, {
   PureComponent,
 } from 'react';
@@ -10,6 +12,8 @@ import cloudtwo from '../../assets/cloud-2.png';
 import mascot from '../../assets/mascot.gif';
 import styles from './styles.module.scss';
 
+gsap.registerPlugin(ScrollTrigger);
+
 class FlyingUbeBanner extends PureComponent {
   componentDidMount () {
     gsap.from(this.mascot, 1.5, {
@@ -17,6 +21,18 @@ class FlyingUbeBanner extends PureComponent {
       repeat: -1,
       y: 100,
       yoyo: true,
+    });
+    gsap.timeline({
+      scrollTrigger: {
+        horizontal: false,
+        scrub: 1,
+        start: 0,
+      },
+      smoothChildTiming: true,
+    }).to(this.mascot, {
+      duration: 1000,
+      rotate: 360,
+      transformOrigin: '200px -200px',
     });
     gsap.to(this.cloudone, 10, {
       ease: 'none',
@@ -61,11 +77,5 @@ class FlyingUbeBanner extends PureComponent {
     );
   }
 }
-
-FlyingUbeBanner.propTypes = {
-  location: PropTypes.shape({
-    pathname: PropTypes.string,
-  }).isRequired,
-};
 
 export default FlyingUbeBanner;
