@@ -14,13 +14,15 @@ class HeroBanner extends PureComponent {
         <FlyingUbeBanner />
         <div className={styles['banner-text']}>
           <div className={styles['banner-text-left']}>
-            Big, Bright
+            Big,<br />
+            Bright
             <div className={styles['supporting-text']}>
               Innovation, beauty &amp; excellence
             </div>
           </div>
           <div className={styles['banner-text-right']}>
-            &amp; Ube- tiful
+            &amp; Ube-<br />
+            tiful
           </div>
         </div>
         <svg
