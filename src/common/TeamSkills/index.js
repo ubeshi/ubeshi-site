@@ -27,8 +27,11 @@ class TeamSkills extends PureComponent {
           equivalent of just typing &lsquo;.&rsquo; or just a blank message in a chat, except you&apos;re
           writing something that can be pronounced. It&apos;s brilliant.
         </div>
+        <div className={styles['team-skills-title']}>
+          Why choose UBE?
+        </div>
         <div className={styles['team-skills-descriptor']}>
-          I&apos;ll admit, I was a Google apologist and still love the company&apos;s game. But this is so much more than Google.
+          I&apos;ll admit, I was a Google apologist and still love the company&apos;s vision. But this is so much more than Google.
           <br /><br />
           Google is like that 10 you see at a bar and decide to shoot your shot with. You go for him, becase why not? He's newly
           available when you thought he was locked up forever. So you make a move, and surprisingly he says yes. You&apos;re shocked.
