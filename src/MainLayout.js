@@ -3,12 +3,16 @@ import React, {
   PureComponent,
 } from 'react';
 import HeroBanner from './common/HeroBanner';
+import TeamDescriptor from './common/TeamDescriptor';
+import TeamSkills from './common/TeamSkills';
 
 class MainLayout extends PureComponent {
   render () {
     return (
       <>
         <HeroBanner />
+        <TeamDescriptor />
+        <TeamSkills />
       </>
     );
   }
