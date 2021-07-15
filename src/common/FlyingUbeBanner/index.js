@@ -19,8 +19,8 @@ class FlyingUbeBanner extends PureComponent {
     gsap.from(this.mascot, 1.5, {
       ease: Power0,
       repeat: -1,
-      y: 100,
       yoyo: true,
+      yPercent: -10,
     });
     gsap.timeline({
       scrollTrigger: {
@@ -30,9 +30,11 @@ class FlyingUbeBanner extends PureComponent {
       },
       smoothChildTiming: true,
     }).to(this.mascot, {
-      duration: 1000,
+      duration: 100,
       rotate: 360,
       transformOrigin: '200px -200px',
+      y: '+=3000px',
+      zIndex: 1000,
     });
     gsap.to(this.cloudone, 10, {
       ease: 'none',
