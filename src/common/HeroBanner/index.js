@@ -39,15 +39,6 @@ class HeroBanner extends PureComponent {
           <polyline points='8 12 12 16 16 12' />
           <line x1='12' x2='12' y1='8' y2='16' />
         </svg>
-        <div className={styles['banner-support-bar']}>
-          <div className={styles['banner-support-bar-title']}>
-            A collective of dreamers
-          </div>
-          <div className={styles['banner-support-bar-description']}>
-            We wish to innovate a new era through the Ubeshi
-          </div>
-          <div className={styles['banner-support-bar-background']} />
-        </div>
       </div>
     );
   }

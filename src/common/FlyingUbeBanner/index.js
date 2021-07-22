@@ -10,6 +10,7 @@ import React, {
 import cloudone from '../../assets/cloud-1.png';
 import cloudtwo from '../../assets/cloud-2.png';
 import mascot from '../../assets/mascot.gif';
+import mountains from '../../assets/mountains.svg';
 import styles from './styles.module.scss';
 
 gsap.registerPlugin(ScrollTrigger);
@@ -30,10 +31,10 @@ class FlyingUbeBanner extends PureComponent {
       },
       smoothChildTiming: true,
     }).to(this.mascot, {
-      duration: 100,
+      duration: 0.1,
       rotate: 360,
       transformOrigin: '200px -200px',
-      y: '+=3000px',
+      y: '-3000px',
       zIndex: 1000,
     });
     gsap.to(this.cloudone, 10, {
@@ -45,6 +46,34 @@ class FlyingUbeBanner extends PureComponent {
       ease: 'none',
       repeat: -1,
       x: 4000,
+    });
+    gsap.to(this.mountains, 15, {
+      ease: 'none',
+      repeat: -1,
+      x: window.innerWidth,
+    });
+    gsap.to(this.mountains2, 15, {
+      ease: 'none',
+      repeat: -1,
+      x: window.innerWidth,
+    });
+
+    gsap.to(this.mountains, {
+      ease: 'none',
+      scrollTrigger: {
+        scrub: true,
+        start: 0,
+      },
+      yPercent: -30,
+    });
+
+    gsap.to(this.mountains2, {
+      ease: 'none',
+      scrollTrigger: {
+        scrub: true,
+        start: 0,
+      },
+      yPercent: -30,
     });
   }
 
@@ -74,6 +103,22 @@ class FlyingUbeBanner extends PureComponent {
             this.cloudtwo = element;
           }}
           src={cloudtwo}
+        />
+        <img
+          alt='Mountains'
+          className={styles.mountains}
+          ref={(element) => {
+            this.mountains = element;
+          }}
+          src={mountains}
+        />
+        <img
+          alt='Mountains2'
+          className={styles['mountains-2']}
+          ref={(element) => {
+            this.mountains2 = element;
+          }}
+          src={mountains}
         />
       </>
     );

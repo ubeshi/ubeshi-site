@@ -18,5 +18,25 @@
   height: 50%;
   top: 200px;
   left: -800px;
-  z-index: -10px;
+  z-index: -10;
+}
+
+.mountains {
+  position: absolute;
+  height: 2000px;
+  width: 2000px;
+  top: -300px;
+  left: 0;
+  opacity: 0.8;
+  z-index: -20;
+}
+
+.mountains-2 {
+  position: absolute;
+  height: 2000px;
+  width: 2000px;
+  top: -300px;
+  left: -2000px;
+  opacity: 0.8;
+  z-index: -20;
 }
