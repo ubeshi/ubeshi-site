@@ -30,9 +30,6 @@ class HeroBanner extends PureComponent {
           <div className={styles['banner-text-left']}>
             Big,<br />
             Bright
-            <div className={styles['supporting-text']}>
-              Innovation, beauty &amp; excellence
-            </div>
           </div>
           <div className={styles['banner-text-right']}>
             &amp; Ube-<br />
