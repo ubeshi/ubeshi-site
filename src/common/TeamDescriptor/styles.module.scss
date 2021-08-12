@@ -12,6 +12,21 @@
 
     .strong {
       color: #4d007c;
+      z-index: 1000;
     }
+  }
+
+  .ube-1, .ube-2, .ube-3 {
+    position: absolute;
+    width: 20vw;
+    top: 250vh;
+  }
+
+  .ube-1 {
+    left: 50%;
+  }
+
+  .ube-2 {
+    left: 80%;
   }
 }

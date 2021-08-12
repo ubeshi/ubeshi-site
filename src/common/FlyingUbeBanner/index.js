@@ -61,19 +61,19 @@ class FlyingUbeBanner extends PureComponent {
     gsap.to(this.cloudone, {
       ease: 'none',
       scrollTrigger: {
-        scrub: true,
+        scrub: 2,
         start: 0,
       },
-      yPercent: -30,
+      yPercent: 30,
     });
 
     gsap.to(this.cloudtwo, {
       ease: 'none',
       scrollTrigger: {
-        scrub: true,
+        scrub: 2,
         start: 0,
       },
-      yPercent: -30,
+      yPercent: 30,
     });
   }
 
