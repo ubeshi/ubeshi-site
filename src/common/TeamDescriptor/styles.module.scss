@@ -19,6 +19,7 @@
   .ube-1, .ube-2, .ube-3 {
     position: absolute;
     width: 20vw;
+    min-width: 300px;
     top: 250vh;
   }
 
@@ -39,6 +40,10 @@
     .upper-paragraph {
       padding-left: 0;
       max-width: 100%;
+    }
+
+    .ube-3 {
+      left: -50%;
     }
   }
 }
