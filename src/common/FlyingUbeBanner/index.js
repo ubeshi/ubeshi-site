@@ -40,12 +40,12 @@ class FlyingUbeBanner extends PureComponent {
     gsap.to(this.cloudone, 10, {
       ease: 'none',
       repeat: -1,
-      x: 3000,
+      x: 3 * window.innerWidth,
     });
     gsap.to(this.cloudtwo, 8, {
       ease: 'none',
       repeat: -1,
-      x: 4000,
+      x: 3 * window.innerWidth,
     });
     gsap.to(this.mountains, 15, {
       ease: 'none',
@@ -58,7 +58,7 @@ class FlyingUbeBanner extends PureComponent {
       x: window.innerWidth,
     });
 
-    gsap.to(this.mountains, {
+    gsap.to(this.cloudone, {
       ease: 'none',
       scrollTrigger: {
         scrub: true,
@@ -67,7 +67,7 @@ class FlyingUbeBanner extends PureComponent {
       yPercent: -30,
     });
 
-    gsap.to(this.mountains2, {
+    gsap.to(this.cloudtwo, {
       ease: 'none',
       scrollTrigger: {
         scrub: true,

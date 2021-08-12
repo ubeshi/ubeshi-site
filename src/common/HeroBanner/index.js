@@ -10,19 +10,6 @@ class HeroBanner extends PureComponent {
       <div className={styles['hero-banner']}>
         <div className={styles.logo}>ubeshi</div>
         <FlyingUbeBanner />
-        <div className={styles['banner-text']}>
-          <div className={styles['banner-text-left']}>
-            Big,<br />
-            Bright
-            <div className={styles['supporting-text']}>
-              Innovation, beauty &amp; excellence
-            </div>
-          </div>
-          <div className={styles['banner-text-right']}>
-            &amp; Ube-<br />
-            tiful
-          </div>
-        </div>
         <svg
           className={styles['icon-continue']}
           fill='none'
@@ -39,6 +26,19 @@ class HeroBanner extends PureComponent {
           <polyline points='8 12 12 16 16 12' />
           <line x1='12' x2='12' y1='8' y2='16' />
         </svg>
+        <div className={styles['banner-text']}>
+          <div className={styles['banner-text-left']}>
+            Big,<br />
+            Bright
+            <div className={styles['supporting-text']}>
+              Innovation, beauty &amp; excellence
+            </div>
+          </div>
+          <div className={styles['banner-text-right']}>
+            &amp; Ube-<br />
+            tiful
+          </div>
+        </div>
       </div>
     );
   }
