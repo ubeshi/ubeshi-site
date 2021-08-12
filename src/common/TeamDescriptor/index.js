@@ -14,21 +14,13 @@ gsap.registerPlugin(ScrollTrigger);
 
 class TeamDescriptor extends PureComponent {
   componentDidMount () {
-    gsap.timeline({
-      scrollTrigger: {
-        horizontal: false,
-        scrub: 1,
-        start: 0,
-      },
-      smoothChildTiming: true,
-    });
     gsap.to(this.ubeone, {
       ease: 'none',
       scrollTrigger: {
         scrub: 2,
         start: 0,
       },
-      yPercent: -300,
+      yPercent: -700,
     });
     gsap.to(this.ubetwo, {
       ease: 'none',
