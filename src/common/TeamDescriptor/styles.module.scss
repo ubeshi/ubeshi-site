@@ -3,40 +3,26 @@
   font-size: 1.5em;
   letter-spacing: 2px;
   font-family: neue-haas-grotesk-display, sans-serif;
-  font-weight: 400;
+  font-weight: 100;
   font-style: normal;
   background-color: #24132B;
   color: #bdaec5;
   z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   .upper-paragraph {
-    padding-left: 200px;
+    padding-bottom: 200px;
     max-width: 500px;
     color: white;
 
     .strong {
-      color: #4d007c;
+      color: #FF8180;
       z-index: 1000;
       font-weight: 600;
       letter-spacing: 1px;
     }
-  }
-
-  .ube-1,
-  .ube-2,
-  .ube-3 {
-    position: absolute;
-    width: 20vw;
-    min-width: 300px;
-    top: 250vh;
-  }
-
-  .ube-1 {
-    left: 50%;
-  }
-
-  .ube-2 {
-    left: 80%;
   }
 }
 
@@ -48,10 +34,6 @@
     .upper-paragraph {
       padding-left: 0;
       max-width: 100%;
-    }
-
-    .ube-3 {
-      left: -50%;
     }
   }
 }

@@ -14,11 +14,11 @@ class TeamDescriptor extends PureComponent {
     return (
       <div className={styles['team-descriptor']}>
         <div className={styles['upper-paragraph']}>
-          <span className={styles.strong}>Ubeshi</span> is a team of <span className={styles.strong}>innovators</span> with
-          big dreams and big <span className={styles.strong}>guts</span>.<br /><br />
-          We <span className={styles.strong}>shape</span> and augment the <span className={styles.strong}>stories</span> of
+          <span className={styles.strong}>Ubeshi</span> is a team of innovators with
+          big dreams and big guts.<br /><br />
+          We shape and augment the stories of
           brands, corporations, and our <span className={styles.strong}>future</span>.<br /><br />
-          Our mission directive is simple: get <span className={styles.strong}>Jada</span> a <span className={styles.strong}>job</span>.
+          Our mission directive is simple: get Jada a job.
         </div>
       </div>
     );

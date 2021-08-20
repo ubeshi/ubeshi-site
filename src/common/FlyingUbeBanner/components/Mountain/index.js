@@ -24,10 +24,10 @@ class Mountain extends PureComponent {
     const {timeline, index} = this.props;
     if (timeline) {
       timeline.to(this.mountainsright, {
-        y: `-${600 - index * 70}px`,
+        y: `-${600 - index * 170}px`,
       }, 0);
       timeline.to(this.mountainsleft, {
-        y: `-${600 - index * 70}px`,
+        y: `-${600 - index * 170}px`,
       }, 0);
     }
   }
