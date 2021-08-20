@@ -83,7 +83,7 @@
 
 @media screen and (max-width: 500px) {
   .banner-text {
-    font-size: 3em;
+    font-size: 5em;
     letter-spacing: 0.1px;
     justify-content: baseline;
 
@@ -92,9 +92,16 @@
       letter-spacing: 0.5px;
       line-height: 1em;
     }
+  }
 
-    .banner-text-right {
-      padding-top: 0;
-    }
+  .hero-main-image {
+    height: 50vw;
+  }
+}
+
+
+@media screen and (max-height: 1100px) {
+  .footer-base {
+    top: calc(100vh - 200px);
   }
 }
