@@ -15,11 +15,18 @@ import mountainslayertwo from '../../assets/mountains-layer-2.svg';
 import mountainslayerthree from '../../assets/mountains-layer-3.svg';
 import mountainslayerfour from '../../assets/mountains-layer-4.svg';
 import mountainslayerfive from '../../assets/mountains-layer-5.svg';
+import Mountain from './components/Mountain';
 import styles from './styles.module.scss';
 
 gsap.registerPlugin(ScrollTrigger);
 
 class FlyingUbeBanner extends PureComponent {
+  constructor (props) {
+    super(props);
+    this.mountains = [mountainslayerone, mountainslayertwo, mountainslayerthree, mountainslayerfour, mountainslayerfive];
+    this.timeline = null;
+  }
+
   componentDidMount () {
     gsap.from(this.mascot, 1.5, {
       ease: Power0,
@@ -52,93 +59,6 @@ class FlyingUbeBanner extends PureComponent {
       x: 3 * window.innerWidth,
     });
 
-    gsap.to(this.mountains11, 15, {
-      ease: 'none',
-      repeat: -1,
-      x: window.innerWidth,
-    });
-    gsap.to(this.mountains12, 15, {
-      ease: 'none',
-      repeat: -1,
-      x: window.innerWidth,
-    });
-
-    gsap.to(this.mountains21, 25, {
-      ease: 'none',
-      repeat: -1,
-      x: window.innerWidth,
-    });
-    gsap.to(this.mountains22, 25, {
-      ease: 'none',
-      repeat: -1,
-      x: window.innerWidth,
-    });
-    gsap.to(this.mountains31, 35, {
-      ease: 'none',
-      repeat: -1,
-      x: window.innerWidth,
-    });
-    gsap.to(this.mountains32, 35, {
-      ease: 'none',
-      repeat: -1,
-      x: window.innerWidth,
-    });
-    gsap.to(this.mountains41, 45, {
-      ease: 'none',
-      repeat: -1,
-      x: window.innerWidth,
-    });
-    gsap.to(this.mountains42, 45, {
-      ease: 'none',
-      repeat: -1,
-      x: window.innerWidth,
-    });
-    gsap.to(this.mountains51, 55, {
-      ease: 'none',
-      repeat: -1,
-      x: window.innerWidth,
-    });
-    gsap.to(this.mountains52, 55, {
-      ease: 'none',
-      repeat: -1,
-      x: window.innerWidth,
-    });
-
-    this.timeline.to(this.mountains11, {
-      y: '-500px',
-    }, 0);
-    this.timeline.to(this.mountains12, {
-      y: '-500px',
-    }, 0);
-
-    this.timeline.to(this.mountains21, {
-      y: '-400px',
-    }, 0);
-    this.timeline.to(this.mountains22, {
-      y: '-400px',
-    }, 0);
-
-    this.timeline.to(this.mountains31, {
-      y: '-300px',
-    }, 0);
-    this.timeline.to(this.mountains32, {
-      y: '-300px',
-    }, 0);
-
-    this.timeline.to(this.mountains41, {
-      y: '-200px',
-    }, 0);
-    this.timeline.to(this.mountains42, {
-      y: '-200px',
-    }, 0);
-
-    this.timeline.to(this.mountains51, {
-      y: '-100px',
-    }, 0);
-    this.timeline.to(this.mountains52, {
-      y: '-100px',
-    }, 0);
-
     this.timeline.to(this.footerbase, {
       y: '-500px',
     }, 0);
@@ -155,6 +75,7 @@ class FlyingUbeBanner extends PureComponent {
     }, 0);
 
     ScrollTrigger.refresh();
+    this.forceUpdate();
   }
 
   render () {
@@ -176,12 +97,10 @@ class FlyingUbeBanner extends PureComponent {
         >
           <div className={styles['banner-text-left']}>
             Big,<br />
-            Bright
+            Bright, <br />
+            &amp; Ube-tiful
           </div>
-          <div className={styles['banner-text-right']}>
-            &amp; Ube-<br />
-            tiful
-          </div>
+          <span />
         </div>
         <img
           alt='Cloud one'
@@ -199,86 +118,18 @@ class FlyingUbeBanner extends PureComponent {
           }}
           src={cloudtwo}
         />
-        <img
-          alt='Mountains'
-          className={`${styles.mountains} ${styles['mountains-layer-1']}`}
-          ref={(element) => {
-            this.mountains11 = element;
-          }}
-          src={mountainslayerone}
-        />
-        <img
-          alt='Mountains2'
-          className={`${styles['mountains-2']} ${styles['mountains-layer-1']}`}
-          ref={(element) => {
-            this.mountains12 = element;
-          }}
-          src={mountainslayerone}
-        />
-        <img
-          alt='Mountains'
-          className={`${styles.mountains} ${styles['mountains-layer-2']}`}
-          ref={(element) => {
-            this.mountains21 = element;
-          }}
-          src={mountainslayertwo}
-        />
-        <img
-          alt='Mountains2'
-          className={`${styles['mountains-2']} ${styles['mountains-layer-2']}`}
-          ref={(element) => {
-            this.mountains22 = element;
-          }}
-          src={mountainslayertwo}
-        />
-        <img
-          alt='Mountains'
-          className={`${styles.mountains} ${styles['mountains-layer-3']}`}
-          ref={(element) => {
-            this.mountains31 = element;
-          }}
-          src={mountainslayerthree}
-        />
-        <img
-          alt='Mountains'
-          className={`${styles['mountains-2']} ${styles['mountains-layer-3']}`}
-          ref={(element) => {
-            this.mountains32 = element;
-          }}
-          src={mountainslayerthree}
-        />
-        <img
-          alt='Mountains'
-          className={`${styles.mountains} ${styles['mountains-layer-4']}`}
-          ref={(element) => {
-            this.mountains41 = element;
-          }}
-          src={mountainslayerfour}
-        />
-        <img
-          alt='Mountains'
-          className={`${styles['mountains-2']} ${styles['mountains-layer-4']}`}
-          ref={(element) => {
-            this.mountains42 = element;
-          }}
-          src={mountainslayerfour}
-        />
-        <img
-          alt='Mountains'
-          className={`${styles.mountains} ${styles['mountains-layer-5']}`}
-          ref={(element) => {
-            this.mountains51 = element;
-          }}
-          src={mountainslayerfive}
-        />
-        <img
-          alt='Mountains'
-          className={`${styles['mountains-2']} ${styles['mountains-layer-5']}`}
-          ref={(element) => {
-            this.mountains52 = element;
-          }}
-          src={mountainslayerfive}
-        />
+
+        { this.mountains.map((mountain, index) => {
+          return (
+            <Mountain
+              index={index}
+              key={mountain}
+              src={mountain}
+              timeline={this.timeline}
+            />
+          );
+        })}
+
         <div
           className={styles['footer-base']}
           ref={(element) => {

@@ -56,28 +56,6 @@
   z-index: -20;
 }
 
-.mountains-layer-1 {
-  top: calc(-50vh + 150px);
-}
-
-.mountains-layer-2 {
-  z-index: -30;
-}
-
-.mountains-layer-3 {
-  z-index: -40;
-}
-
-.mountains-layer-4 {
-  z-index: -50;
-  top: calc(-50vh - 100px);
-}
-
-.mountains-layer-5 {
-  z-index: -60;
-  top: calc(-50vh - 150px);
-}
-
 .banner-text {
   position: absolute;
   width: 100%;
@@ -90,6 +68,7 @@
   display: flex;
   justify-content: space-around;
   top: 30vh;
+  z-index: -30;
 
   .banner-text-left {
     color: #fff7f7;
