@@ -1,5 +1,5 @@
 import {
-  TweenLite, Power0,
+  gsap, Power0,
 } from 'gsap';
 import PropTypes from 'prop-types';
 import React from 'react';
@@ -44,7 +44,7 @@ class SmoothScroll extends React.Component {
   });
 
   onScroll = () => {
-    TweenLite.to(this.viewport, 0.5, {
+    gsap.to(this.viewport, 0.5, {
       ease: Power0,
       force3D: true,
       rotationY: 0.01,
