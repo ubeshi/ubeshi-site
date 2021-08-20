@@ -41,3 +41,9 @@
   z-index: -60;
   top: calc(-50vh - 150px);
 }
+
+@media screen and (max-height: 1100px) {
+  .mountains-layer-1 {
+    top: -50vh;
+  }
+}
