@@ -27,7 +27,7 @@
 .footer-base {
   width: 100vw;
   height: 1200px;
-  background-color: #24132B;
+  background-color: #24132b;
   position: absolute;
   left: 0;
   top: calc(100vh - 15vh);
@@ -77,7 +77,8 @@
     top: calc(100vh - 25vh);
   }
 
-  .cloud-1, .cloud-2 {
+  .cloud-1,
+  .cloud-2 {
     z-index: -10;
   }
 }

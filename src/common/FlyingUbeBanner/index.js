@@ -80,7 +80,7 @@ class FlyingUbeBanner extends PureComponent {
     this.forceUpdate();
   }
 
-  componentWillUnmount() {
+  componentWillUnmount () {
     this.componentCleanup();
     window.removeEventListener('beforeunload', this.componentCleanup);
   }
