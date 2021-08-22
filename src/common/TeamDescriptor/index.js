@@ -13,6 +13,9 @@ class TeamDescriptor extends PureComponent {
   render () {
     return (
       <div className={styles['team-descriptor']}>
+        <div className={styles['team-descriptor-title']}>
+          Our<br />Mission
+        </div>
         <div className={styles['upper-paragraph']}>
           <span className={styles.strong}>Ubeshi</span> is a team of innovators with
           big dreams and big guts.<br /><br />

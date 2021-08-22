@@ -13,7 +13,7 @@
   height: 50%;
   top: 100px;
   left: -150vw;
-  z-index: -10;
+  z-index: 10;
 }
 
 .cloud-2 {
@@ -21,29 +21,7 @@
   height: 50%;
   top: 200px;
   left: -150vw;
-  z-index: -10;
-}
-
-.mountains {
-  position: absolute;
-  height: 100%;
-  width: 100vw;
-  min-width: 1000px;
-  top: calc(-50vh - 100px);
-  left: -5px;
-  opacity: 1;
-  z-index: -20;
-}
-
-.mountains-2 {
-  position: absolute;
-  height: 100%;
-  width: 100vw;
-  min-width: 1000px;
-  top: calc(-50vh - 100px);
-  left: -100vw;
-  opacity: 1;
-  z-index: -20;
+  z-index: 10;
 }
 
 .footer-base {
@@ -52,7 +30,7 @@
   background-color: #24132B;
   position: absolute;
   left: 0;
-  top: calc(100vh - 100px);
+  top: calc(100vh - 15vh);
   z-index: -21;
 }
 
@@ -71,12 +49,7 @@
   z-index: -30;
   opacity: 0.95;
 
-  .banner-text-left {
-    color: #fff7f7;
-  }
-
-  .banner-text-right {
-    padding-top: 150px;
+  .banner-text-body {
     color: #fff7f7;
   }
 }
@@ -87,7 +60,7 @@
     letter-spacing: 0.1px;
     justify-content: baseline;
 
-    .banner-text-left .supporting-text {
+    .banner-text-body .supporting-text {
       font-size: 0.5em;
       letter-spacing: 0.5px;
       line-height: 1em;
@@ -99,9 +72,12 @@
   }
 }
 
-
 @media screen and (max-height: 1100px) {
   .footer-base {
-    top: calc(100vh - 200px);
+    top: calc(100vh - 25vh);
+  }
+
+  .cloud-1, .cloud-2 {
+    z-index: -10;
   }
 }

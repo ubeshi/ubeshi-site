@@ -25,6 +25,7 @@ class FlyingUbeBanner extends PureComponent {
     super(props);
     this.mountains = [mountainslayerone, mountainslayertwo, mountainslayerthree, mountainslayerfour, mountainslayerfive];
     this.timeline = null;
+    this.componentCleanup = this.componentCleanup.bind(this);
   }
 
   componentDidMount () {
@@ -74,8 +75,19 @@ class FlyingUbeBanner extends PureComponent {
       y: '-500px',
     }, 0);
 
+    window.addEventListener('beforeunload', this.componentCleanup);
     ScrollTrigger.refresh();
     this.forceUpdate();
+  }
+
+  componentWillUnmount() {
+    this.componentCleanup();
+    window.removeEventListener('beforeunload', this.componentCleanup);
+  }
+
+  componentCleanup () {
+    window.scrollTo(0, 0);
+    ScrollTrigger.refresh();
   }
 
   render () {
@@ -95,7 +107,7 @@ class FlyingUbeBanner extends PureComponent {
             this.bannertext = element;
           }}
         >
-          <div className={styles['banner-text-left']}>
+          <div className={styles['banner-text-body']}>
             Big,<br />
             Bright, <br />
             &amp; Ube-tiful

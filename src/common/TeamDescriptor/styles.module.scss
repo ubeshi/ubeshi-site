@@ -1,5 +1,5 @@
 .team-descriptor {
-  padding: 200px 0;
+  padding: 200px 20vw;
   font-size: 1.5em;
   letter-spacing: 2px;
   font-family: neue-haas-grotesk-display, sans-serif;
@@ -9,11 +9,16 @@
   color: #bdaec5;
   z-index: 100;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  justify-content: space-around;
+  padding-bottom: 600px;
+
+  .team-descriptor-title {
+    font-weight: 600;
+    font-size: 4em;
+    line-height: 0.8em;
+  }
 
   .upper-paragraph {
-    padding-bottom: 200px;
     max-width: 500px;
     color: white;
 
@@ -26,9 +31,23 @@
   }
 }
 
+@media screen and (max-width: 1000px) {
+  .team-descriptor {
+    flex-direction: column;
+
+    .team-descriptor-title {
+      font-size: 2em;
+      padding-bottom: 50px;
+    }
+
+    .upper-paragraph {
+      font-size: 1em;
+    }
+  }
+}
+
 @media screen and (max-width: 500px) {
   .team-descriptor {
-    font-size: 2em;
     padding: 100px 30px;
 
     .upper-paragraph {
