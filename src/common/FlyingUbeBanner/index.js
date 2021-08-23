@@ -1,5 +1,5 @@
 import gsap, {
-  Power0, Power1,
+  Power1,
 } from 'gsap';
 import {
   ScrollTrigger,
