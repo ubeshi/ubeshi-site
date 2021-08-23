@@ -1,5 +1,5 @@
 import gsap, {
-  Power0,
+  Power0, Power1,
 } from 'gsap';
 import {
   ScrollTrigger,
@@ -30,7 +30,7 @@ class FlyingUbeBanner extends PureComponent {
 
   componentDidMount () {
     gsap.from(this.mascot, 1.5, {
-      ease: Power0,
+      ease: Power1.easeInOut,
       repeat: -1,
       yoyo: true,
       yPercent: -10,
@@ -46,8 +46,20 @@ class FlyingUbeBanner extends PureComponent {
       rotate: 30,
       x: -window.innerWidth,
       y: '-500px',
-      zIndex: 1000,
     }, 0.01);
+
+    gsap.from(this.cloudone, 5, {
+      ease: Power1.easeInOut,
+      repeat: -1,
+      yoyo: true,
+      yPercent: -10,
+    });
+    gsap.from(this.cloudtwo, 7, {
+      ease: Power1.easeInOut,
+      repeat: -1,
+      yoyo: true,
+      yPercent: -10,
+    });
 
     gsap.to(this.cloudone, 10, {
       ease: 'none',
