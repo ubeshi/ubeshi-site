@@ -1,9 +1,7 @@
 import gsap, {
   Power1,
 } from 'gsap';
-import {
-  ScrollTrigger,
-} from 'gsap/ScrollTrigger';
+import PropTypes from 'prop-types';
 import React, {
   PureComponent,
 } from 'react';
@@ -18,14 +16,10 @@ import mountainslayerfive from '../../assets/mountains-layer-5.svg';
 import Mountain from './components/Mountain';
 import styles from './styles.module.scss';
 
-gsap.registerPlugin(ScrollTrigger);
-
 class FlyingUbeBanner extends PureComponent {
   constructor (props) {
     super(props);
     this.mountains = [mountainslayerone, mountainslayertwo, mountainslayerthree, mountainslayerfour, mountainslayerfive];
-    this.timeline = null;
-    this.componentCleanup = this.componentCleanup.bind(this);
   }
 
   componentDidMount () {
@@ -35,18 +29,6 @@ class FlyingUbeBanner extends PureComponent {
       yoyo: true,
       yPercent: -10,
     });
-
-    this.timeline = gsap.timeline({
-      scrollTrigger: {
-        scrub: 1,
-      },
-    });
-
-    this.timeline.to(this.mascot, {
-      rotate: 30,
-      x: -window.innerWidth,
-      y: '-500px',
-    }, 0.01);
 
     gsap.from(this.cloudone, 5, {
       ease: Power1.easeInOut,
@@ -71,38 +53,34 @@ class FlyingUbeBanner extends PureComponent {
       repeat: -1,
       x: 3 * window.innerWidth,
     });
-
-    this.timeline.to(this.footerbase, {
-      y: '-500px',
-    }, 0);
-
-    this.timeline.to(this.cloudone, {
-      y: '-1200px',
-    }, 0);
-    this.timeline.to(this.cloudtwo, {
-      y: '-1200px',
-    }, 0);
-
-    this.timeline.to(this.bannertext, {
-      y: '-500px',
-    }, 0);
-
-    window.addEventListener('beforeunload', this.componentCleanup);
-    ScrollTrigger.refresh();
-    this.forceUpdate();
   }
 
-  componentWillUnmount () {
-    this.componentCleanup();
-    window.removeEventListener('beforeunload', this.componentCleanup);
-  }
-
-  componentCleanup () {
-    window.scrollTo(0, 0);
-    ScrollTrigger.refresh();
+  componentDidUpdate () {
+    const {timeline} = this.props;
+    if (timeline) {
+      timeline.to(this.mascot, {
+        rotate: 30,
+        x: -window.innerWidth,
+        y: '-500px',
+      }, 0.01);
+      timeline.to(this.footerbase, {
+        y: '-500px',
+      }, 0);
+      timeline.to(this.cloudone, {
+        y: '-1200px',
+      }, 0);
+      timeline.to(this.cloudtwo, {
+        y: '-1200px',
+      }, 0);
+      timeline.to(this.bannertext, {
+        y: '-500px',
+      }, 0);
+    }
   }
 
   render () {
+    const {timeline} = this.props;
+
     return (
       <>
         <img
@@ -149,7 +127,7 @@ class FlyingUbeBanner extends PureComponent {
               index={index}
               key={mountain}
               src={mountain}
-              timeline={this.timeline}
+              timeline={timeline}
             />
           );
         })}
@@ -164,5 +142,17 @@ class FlyingUbeBanner extends PureComponent {
     );
   }
 }
+
+FlyingUbeBanner.propTypes = {
+  timeline: PropTypes.shape({
+    to: PropTypes.func,
+  }),
+};
+
+FlyingUbeBanner.defaultProps = {
+  timeline: {
+    to: () => {},
+  },
+};
 
 export default FlyingUbeBanner;

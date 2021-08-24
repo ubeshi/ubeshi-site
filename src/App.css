@@ -2,3 +2,11 @@ body {
   background-color: #ffcaca;
   overflow-x: hidden;
 }
+
+.inview-split-parent {
+  overflow: hidden;
+}
+
+.inview-split-child {
+  display: inline-block;
+}
