@@ -82,3 +82,9 @@
     z-index: -10;
   }
 }
+
+@media screen and (max-width: 800px) {
+  .footer-base {
+    top: calc(100vh - 100px);
+  }
+}
