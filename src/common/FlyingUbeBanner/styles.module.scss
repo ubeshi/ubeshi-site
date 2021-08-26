@@ -82,6 +82,11 @@
   .hero-main-image {
     height: 50vw;
   }
+
+  .cloud-1,
+  .cloud-2 {
+    display: none;
+  }
 }
 
 @media screen and (max-height: 1100px) {

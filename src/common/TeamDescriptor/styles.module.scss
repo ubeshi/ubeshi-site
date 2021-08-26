@@ -24,8 +24,7 @@
     }
 
     .upper-paragraph {
-      max-width: 500px;
-      min-width: 500px;
+      width: 500px;
       color: white;
 
       .strong {
@@ -53,13 +52,9 @@
   }
 }
 
-@media screen and (max-width: 500px) {
-  .team-descriptor-content {
-    padding: 100px 30px;
-
-    .upper-paragraph {
-      padding-left: 0;
-      max-width: 100%;
-    }
+@media screen and (max-width: 600px) {
+  .team-descriptor .team-descriptor-content .upper-paragraph {
+    padding-left: 0;
+    width: 90%;
   }
 }

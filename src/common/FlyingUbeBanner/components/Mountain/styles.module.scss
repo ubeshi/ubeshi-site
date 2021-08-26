@@ -77,6 +77,7 @@
 @media screen and (max-width: 600px) {
   .mountains,
   .mountains-2 {
-    top: calc(-20vh + 50px);
+    top: calc(-20vh - 250px);
+    height: 100%;
   }
 }
