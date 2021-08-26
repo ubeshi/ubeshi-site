@@ -55,38 +55,57 @@ class TeamDescriptor extends PureComponent {
     return (
       <div className={styles['team-descriptor']}>
         <div className={styles['team-descriptor-content']}>
-          <InView
-            as='div' className={styles['team-descriptor-title']} delay={100}
-            onChange={(inView, entry) => {
-              return this.animateInDiv(inView, entry);
-            }} triggerOnce>
-            Our<br />Mission
-          </InView>
+          <div className={styles['team-descriptor-title']}>
+            <InView
+              delay={500}
+              onChange={(inView, entry) => {
+                return this.animateInDiv(inView, entry);
+              }}
+            >
+              <span>Our</span>
+            </InView>
+            <InView
+              delay={800}
+              onChange={(inView, entry) => {
+                return this.animateInDiv(inView, entry);
+              }}
+            >
+              <span>Mission</span>
+            </InView>
+          </div>
           <div className={styles['upper-paragraph']}>
             <InView
-              as='span' delay={150}
+              delay={200}
               onChange={(inView, entry) => {
                 return this.animateInDiv(inView, entry);
-              }} triggerOnce>
-              <span className={styles.strong}>Ubeshi</span> is a team of innovators with
-              big dreams and big guts.
+              }}
+            >
+              <span>
+                <span className={styles.strong}>Ubeshi</span> is a team of innovators with
+                big dreams and big guts.
+              </span>
             </InView>
             <br />
             <InView
-              as='span' delay={250}
+              delay={500}
               onChange={(inView, entry) => {
                 return this.animateInDiv(inView, entry);
-              }} triggerOnce>
-              We shape and augment the stories of
-              brands, corporations, and our <span className={styles.strong}>future</span>.
+              }}
+            >
+              <span>
+                We shape and augment the stories of
+                brands, corporations, and our <span className={styles.strong}>future</span>.
+              </span>
             </InView>
             <br />
             <InView
-              as='span' delay={350}
+              delay={800}
               onChange={(inView, entry) => {
                 return this.animateInDiv(inView, entry);
-              }} triggerOnce>
-              Our mission directive is simple: get Jada a job.
+              }} >
+              <span>
+                Our mission directive is simple: get Jada a job.
+              </span>
             </InView>
           </div>
         </div>
