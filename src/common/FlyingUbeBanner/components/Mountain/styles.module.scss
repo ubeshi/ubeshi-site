@@ -3,7 +3,7 @@
   height: 100%;
   width: 100vw;
   min-width: 1000px;
-  top: calc(-50vh - 100px);
+  top: calc(-20vh - 100px);
   left: -5px;
   opacity: 1;
   z-index: -20;
@@ -14,14 +14,14 @@
   height: 100%;
   width: 100vw;
   min-width: 1000px;
-  top: calc(-50vh - 100px);
+  top: calc(-20vh - 100px);
   left: -100vw;
   opacity: 1;
   z-index: -20;
 }
 
 .mountains-layer-1 {
-  top: calc(-50vh + 8vh);
+  top: calc(-20vh + 8vh);
 }
 
 .mountains-layer-2 {
@@ -34,18 +34,28 @@
 
 .mountains-layer-4 {
   z-index: -50;
-  top: calc(-50vh - 100px);
+  top: calc(-20vh - 100px);
 }
 
 .mountains-layer-5 {
   z-index: -60;
-  top: calc(-50vh - 150px);
+  top: calc(-20vh - 150px);
+}
+
+@media screen and (max-height: 1400px) and (max-width: 1100px) {
+  .mountains-layer-1 {
+    top: calc(-18vh);
+  }
 }
 
 @media screen and (max-height: 1200px) {
   .mountains,
   .mountains-2 {
-    top: calc(-50vh - 150px);
+    top: calc(-20vh - 350px);
+  }
+
+  .mountains-layer-1 {
+    top: calc(-20vh - 150px);
   }
 }
 
@@ -53,23 +63,20 @@
   .mountains,
   .mountains-2 {
     height: 105%;
-  }
-
-  .mountains-layer-1 {
-    top: calc(-50vh + 50px);
+    top: calc(-20vh - 250px);
   }
 }
 
 @media screen and (max-width: 800px) {
   .mountains,
   .mountains-2 {
-    top: calc(-50vh);
+    top: calc(-20vh);
   }
 }
 
 @media screen and (max-width: 600px) {
   .mountains,
   .mountains-2 {
-    top: calc(-50vh + 50px);
+    top: calc(-20vh + 50px);
   }
 }

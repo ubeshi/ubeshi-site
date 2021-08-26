@@ -54,24 +54,42 @@ class TeamDescriptor extends PureComponent {
   render () {
     return (
       <div className={styles['team-descriptor']}>
-        <InView
-          as='div' className={styles['team-descriptor-title']} delay={100}
-          onChange={(inView, entry) => {
-            return this.animateInDiv(inView, entry);
-          }} triggerOnce>
-          Our<br />Mission
-        </InView>
-        <InView
-          as='div' className={styles['upper-paragraph']} delay={150}
-          onChange={(inView, entry) => {
-            return this.animateInDiv(inView, entry);
-          }} triggerOnce>
-          <span className={styles.strong}>Ubeshi</span> is a team of innovators with
-          big dreams and big guts.<br /><br />
-          We shape and augment the stories of
-          brands, corporations, and our <span className={styles.strong}>future</span>.<br /><br />
-          Our mission directive is simple: get Jada a job.
-        </InView>
+        <div className={styles['team-descriptor-content']}>
+          <InView
+            as='div' className={styles['team-descriptor-title']} delay={100}
+            onChange={(inView, entry) => {
+              return this.animateInDiv(inView, entry);
+            }} triggerOnce>
+            Our<br />Mission
+          </InView>
+          <div className={styles['upper-paragraph']}>
+            <InView
+              as='span' delay={150}
+              onChange={(inView, entry) => {
+                return this.animateInDiv(inView, entry);
+              }} triggerOnce>
+              <span className={styles.strong}>Ubeshi</span> is a team of innovators with
+              big dreams and big guts.
+            </InView>
+            <br />
+            <InView
+              as='span' delay={250}
+              onChange={(inView, entry) => {
+                return this.animateInDiv(inView, entry);
+              }} triggerOnce>
+              We shape and augment the stories of
+              brands, corporations, and our <span className={styles.strong}>future</span>.
+            </InView>
+            <br />
+            <InView
+              as='span' delay={350}
+              onChange={(inView, entry) => {
+                return this.animateInDiv(inView, entry);
+              }} triggerOnce>
+              Our mission directive is simple: get Jada a job.
+            </InView>
+          </div>
+        </div>
       </div>
     );
   }

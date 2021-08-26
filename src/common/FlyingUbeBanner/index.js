@@ -64,7 +64,7 @@ class FlyingUbeBanner extends PureComponent {
         y: '-500px',
       }, 0.01);
       timeline.to(this.footerbase, {
-        y: '-500px',
+        y: '-600px',
       }, 0);
       timeline.to(this.cloudone, {
         y: '-1200px',

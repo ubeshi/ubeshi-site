@@ -30,7 +30,7 @@
   background-color: #24132b;
   position: absolute;
   left: 0;
-  top: calc(100vh - 15vh);
+  top: 100vh;
   z-index: -21;
 }
 
@@ -54,6 +54,18 @@
   }
 }
 
+@media screen and (max-height: 1400px) and (max-width: 1100px) {
+  .footer-base {
+    top: calc(90vh);
+  }
+}
+
+@media screen and (max-height: 1200px) {
+  .footer-base {
+    top: calc(100vh - 25vh);
+  }
+}
+
 @media screen and (max-width: 500px) {
   .banner-text {
     font-size: 5em;
@@ -73,10 +85,6 @@
 }
 
 @media screen and (max-height: 1100px) {
-  .footer-base {
-    top: calc(100vh - 25vh);
-  }
-
   .cloud-1,
   .cloud-2 {
     z-index: -10;

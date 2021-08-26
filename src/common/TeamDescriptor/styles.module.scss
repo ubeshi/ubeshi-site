@@ -1,5 +1,5 @@
 .team-descriptor {
-  padding: 200px 20vw;
+  padding: 0px 10vw;
   font-size: 1.5em;
   letter-spacing: 2px;
   font-family: neue-haas-grotesk-display, sans-serif;
@@ -8,32 +8,38 @@
   background-color: #24132b;
   color: #bdaec5;
   z-index: 100;
-  display: flex;
-  justify-content: space-around;
-  padding-bottom: 600px;
 
-  .team-descriptor-title {
-    font-weight: 600;
-    font-size: 4em;
-    line-height: 0.8em;
-    opacity: 0;
-  }
+  .team-descriptor-content {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 200px;
+    border-bottom: 1px #bdaec5 solid;
 
-  .upper-paragraph {
-    max-width: 500px;
-    color: white;
-
-    .strong {
-      color: #ff8180;
-      z-index: 1000;
+    .team-descriptor-title {
       font-weight: 600;
-      letter-spacing: 1px;
+      font-size: 4em;
+      line-height: 0.8em;
+      opacity: 0;
+    }
+  
+    .upper-paragraph {
+      max-width: 500px;
+      min-width: 500px;
+      color: white;
+  
+      .strong {
+        color: #ff8180;
+        z-index: 1000;
+        font-weight: 600;
+        letter-spacing: 1px;
+      }
     }
   }
 }
 
-@media screen and (max-width: 1000px) {
-  .team-descriptor {
+@media screen and (max-width: 1400px) {
+  .team-descriptor-content {
     flex-direction: column;
 
     .team-descriptor-title {
@@ -48,7 +54,7 @@
 }
 
 @media screen and (max-width: 500px) {
-  .team-descriptor {
+  .team-descriptor-content {
     padding: 100px 30px;
 
     .upper-paragraph {
