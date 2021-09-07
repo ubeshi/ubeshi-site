@@ -51,11 +51,11 @@
 @media screen and (max-height: 1200px) {
   .mountains,
   .mountains-2 {
-    top: calc(-20vh - 350px);
+    top: calc(-10vh - 350px);
   }
 
   .mountains-layer-1 {
-    top: calc(-20vh - 150px);
+    top: calc(-10vh - 150px);
   }
 }
 
@@ -63,7 +63,7 @@
   .mountains,
   .mountains-2 {
     height: 105%;
-    top: calc(-20vh - 250px);
+    top: calc(0vh - 250px);
   }
 }
 

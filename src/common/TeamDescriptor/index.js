@@ -61,6 +61,7 @@ class TeamDescriptor extends PureComponent {
               onChange={(inView, entry) => {
                 return this.animateInDiv(inView, entry);
               }}
+              triggerOnce
             >
               Our<br />Mission
             </InView>
@@ -71,6 +72,7 @@ class TeamDescriptor extends PureComponent {
               onChange={(inView, entry) => {
                 return this.animateInDiv(inView, entry);
               }}
+              triggerOnce
             >
               <div className={styles['paragraph-line']}>
                 <span className={styles.strong}>Ubeshi</span> is a team of innovators with
