@@ -40,7 +40,7 @@ class TeamDescriptor extends PureComponent {
       gsap.from(childSplit.lines, {
         duration: 1.5,
         ease: 'power4',
-        stagger: 0.1,
+        stagger: 0.15,
         yPercent: 100,
       });
     } else {
@@ -57,20 +57,12 @@ class TeamDescriptor extends PureComponent {
         <div className={styles['team-descriptor-content']}>
           <div className={styles['team-descriptor-title']}>
             <InView
-              delay={500}
+              delay={200}
               onChange={(inView, entry) => {
                 return this.animateInDiv(inView, entry);
               }}
             >
-              <span>Our</span>
-            </InView>
-            <InView
-              delay={800}
-              onChange={(inView, entry) => {
-                return this.animateInDiv(inView, entry);
-              }}
-            >
-              <span>Mission</span>
+              Our<br />Mission
             </InView>
           </div>
           <div className={styles['upper-paragraph']}>
@@ -80,32 +72,19 @@ class TeamDescriptor extends PureComponent {
                 return this.animateInDiv(inView, entry);
               }}
             >
-              <span>
+              <div className={styles['paragraph-line']}>
                 <span className={styles.strong}>Ubeshi</span> is a team of innovators with
                 big dreams and big guts.
-              </span>
-            </InView>
-            <br />
-            <InView
-              delay={500}
-              onChange={(inView, entry) => {
-                return this.animateInDiv(inView, entry);
-              }}
-            >
-              <span>
+              </div>
+              <div>&#x200b;</div>
+              <div className={styles['paragraph-line']}>
                 We shape and augment the stories of
                 brands, corporations, and our <span className={styles.strong}>future</span>.
-              </span>
-            </InView>
-            <br />
-            <InView
-              delay={800}
-              onChange={(inView, entry) => {
-                return this.animateInDiv(inView, entry);
-              }} >
-              <span>
+              </div>
+              <div>&#x200b;</div>
+              <div>
                 Our mission directive is simple: get Jada a job.
-              </span>
+              </div>
             </InView>
           </div>
         </div>

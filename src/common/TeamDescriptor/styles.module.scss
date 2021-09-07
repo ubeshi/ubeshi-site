@@ -25,6 +25,8 @@
     .upper-paragraph {
       width: 500px;
       color: white;
+      display: inline-block;
+      font-size: 0.95em;
 
       .strong {
         color: #ff8180;
@@ -37,7 +39,7 @@
 }
 
 @media screen and (max-width: 1400px) {
-  .team-descriptor-content {
+  .team-descriptor .team-descriptor-content {
     flex-direction: column;
 
     .team-descriptor-title {
@@ -46,12 +48,12 @@
     }
 
     .upper-paragraph {
-      font-size: 1em;
+      font-size: 0.8em;
     }
   }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 800px) {
   .team-descriptor .team-descriptor-content .upper-paragraph {
     padding-left: 0;
     width: 90%;

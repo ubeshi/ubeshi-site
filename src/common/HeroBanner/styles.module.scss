@@ -2,21 +2,54 @@
   height: 100vh;
   width: 100vw;
 
-  .logo {
-    position: absolute;
-    top: 50px;
-    left: 150px;
-    font-family: forma-djr-banner, sans-serif;
-    font-weight: 700;
-    font-size: 3em;
-    letter-spacing: 1px;
-    color: #fff7f7;
+  .top-banner {
+    border: 1px solid #27132A;
+    margin-top: 50px;
+    margin: 50px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 20px;
+    align-items: center;
+
+    .logo {
+      font-family: forma-djr-banner, sans-serif;
+      font-weight: 700;
+      font-size: 3em;
+      letter-spacing: 1px;
+      color: #27132A;
+      padding: 20px;
+    }
+  
+    .navigation-icons {
+      font-size: 1.1em;
+      padding: 20px;
+
+      a {
+        padding: 0px 20px;
+        color: #27132A;
+        transition: 0.3s;
+      }
+  
+      a:hover {
+        color: #BF5063;
+      }
+    }
   }
 
   @media screen and (max-width: 500px) {
-    .logo {
-      left: 50%;
-      transform: translateX(-50%);
+    .top-banner {
+      flex-direction: column;
+      justify-content: center;
+      padding: 20px 0px;
+
+      .logo {
+        padding: 10px 0px;
+      }
+  
+      .navigation-icons {
+        line-height: 0px;
+        padding: 0;
+      }
     }
   }
 }
