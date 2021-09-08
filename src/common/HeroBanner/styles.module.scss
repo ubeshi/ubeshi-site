@@ -3,7 +3,7 @@
   width: 100vw;
 
   .top-banner {
-    border: 1px solid #27132A;
+    border: 1px solid #A4485D;
     margin-top: 50px;
     margin: 50px;
     display: flex;
@@ -16,7 +16,7 @@
       font-weight: 700;
       font-size: 3em;
       letter-spacing: 1px;
-      color: #27132A;
+      color: #A4485D;
       padding: 20px;
     }
   
@@ -26,12 +26,12 @@
 
       a {
         padding: 0px 20px;
-        color: #27132A;
+        color: #A4485D;
         transition: 0.3s;
       }
   
       a:hover {
-        color: #BF5063;
+        color: #FF7F7F;
       }
     }
   }
