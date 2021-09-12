@@ -18,6 +18,14 @@ class Mountain extends PureComponent {
       repeat: -1,
       x: window.innerWidth,
     });
+    gsap.from(this.mountainsleft, 1.5 + index * 0.35, {
+      ease: 'expo.inOut',
+      y: '50%',
+    });
+    gsap.from(this.mountainsright, 1.5 + index * 0.35, {
+      ease: 'expo.inOut',
+      y: '50%',
+    });
   }
 
   componentDidUpdate () {

@@ -6,6 +6,7 @@ import PropTypes from 'prop-types';
 import React, {
   PureComponent,
 } from 'react';
+import Loader from './assets/loader.gif';
 import HeroBanner from './common/HeroBanner';
 import SmoothScroll from './common/SmoothScroll';
 import TeamDescriptor from './common/TeamDescriptor';
@@ -21,14 +22,27 @@ class MainLayout extends PureComponent {
   }
 
   componentDidMount () {
-    this.timeline = gsap.timeline({
-      scrollTrigger: {
-        scrub: 1,
-      },
+    gsap.to(this.loader, 2, {
+      ease: 'expo.inOut',
+      y: '-100%',
     });
-    window.addEventListener('beforeunload', this.componentCleanup);
-    ScrollTrigger.refresh();
-    this.forceUpdate();
+    gsap.set(this.loader, {
+      delay: 2,
+      opacity: 0,
+      y: '0',
+      zIndex: 0,
+    });
+    setTimeout(() => {
+      document.querySelector('.main-layout').classList.remove('is-loading');
+      this.timeline = gsap.timeline({
+        scrollTrigger: {
+          scrub: 1,
+        },
+      });
+      window.addEventListener('beforeunload', this.componentCleanup);
+      ScrollTrigger.refresh();
+      this.forceUpdate();
+    }, 1000);
   }
 
   componentWillUnmount () {
@@ -43,18 +57,37 @@ class MainLayout extends PureComponent {
 
   render () {
     return (
-      <SmoothScroll>
+      <div
+        className='main-layout is-loading'
+        ref={(element) => {
+          this.canvas = element;
+        }}
+      >
         <div
-          id='scroll-page' ref={(element) => {
-            this.el = element;
-          }}>
-          <HeroBanner
-            timeline={this.timeline}
+          className='fullscreen-loader'
+          ref={(element) => {
+            this.loader = element;
+          }}
+        >
+          <img
+            alt='Loading potato...'
+            className='loader-potato'
+            src={Loader}
           />
-          <TeamDescriptor />
-          <TeamSkills />
         </div>
-      </SmoothScroll>
+        <SmoothScroll>
+          <div
+            id='scroll-page' ref={(element) => {
+              this.el = element;
+            }}>
+            <HeroBanner
+              timeline={this.timeline}
+            />
+            <TeamDescriptor />
+            <TeamSkills />
+          </div>
+        </SmoothScroll>
+      </div>
     );
   }
 }

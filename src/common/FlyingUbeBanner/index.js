@@ -23,35 +23,40 @@ class FlyingUbeBanner extends PureComponent {
   }
 
   componentDidMount () {
-    gsap.from(this.mascot, 1.5, {
-      ease: Power1.easeInOut,
-      repeat: -1,
-      yoyo: true,
-      yPercent: -10,
-    });
-
-    gsap.from(this.cloudone, 5, {
-      ease: Power1.easeInOut,
-      repeat: -1,
-      yoyo: true,
-      yPercent: -10,
-    });
-    gsap.from(this.cloudtwo, 7, {
-      ease: Power1.easeInOut,
-      repeat: -1,
-      yoyo: true,
-      yPercent: -10,
-    });
-
-    gsap.to(this.cloudone, 10, {
-      ease: 'none',
-      repeat: -1,
-      x: 3 * window.innerWidth,
-    });
-    gsap.to(this.cloudtwo, 8, {
-      ease: 'none',
-      repeat: -1,
-      x: 3 * window.innerWidth,
+    gsap.from(this.mascot, 2, {
+      onComplete: () => {
+        gsap.to(this.mascot, 1.5, {
+          ease: Power1.easeInOut,
+          repeat: -1,
+          yoyo: true,
+          yPercent: -10,
+        });
+        gsap.from(this.cloudone, 5, {
+          ease: Power1.easeInOut,
+          repeat: -1,
+          yoyo: true,
+          yPercent: -10,
+        });
+        gsap.from(this.cloudtwo, 7, {
+          ease: Power1.easeInOut,
+          repeat: -1,
+          yoyo: true,
+          yPercent: -10,
+        });
+        gsap.to(this.cloudone, 10, {
+          ease: 'none',
+          repeat: -1,
+          x: 3 * window.innerWidth,
+        });
+        gsap.to(this.cloudtwo, 8, {
+          ease: 'none',
+          repeat: -1,
+          x: 3 * window.innerWidth,
+        });
+      },
+      rotate: 30,
+      x: window.innerWidth,
+      y: '-500px',
     });
   }
 

@@ -1,22 +1,11 @@
-body {
-  background-color: #ffcaca;
-  overflow-x: hidden;
-}
-
-.inview-split-parent {
-  overflow: hidden;
-}
-
-.inview-split-child {
-  display: inline-block;
-}
-
 .fullscreen-loader {
   height: 100%;
   width: 100%;
   position: absolute;
   background-color: #ffb3b3;
   z-index: 1000;
+  top: 0;
+  left: 0;
 }
 
 .loader-potato {
@@ -27,13 +16,4 @@ body {
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   mix-blend-mode: color-burn;
-}
-
-.main-layout {
-  height: 100vh;
-  width: 100vw;
-}
-
-.is-loading {
-  overflow: hidden;
 }
