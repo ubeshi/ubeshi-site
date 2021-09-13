@@ -17,6 +17,7 @@ class SmoothScroll extends React.Component {
 
   componentDidMount () {
     window.addEventListener('scroll', this.onScroll);
+    window.addEventListener('touchmove', this.onScroll);
     this.ro.observe(this.viewport);
     const {height} = this.state;
     new WOW.WOW({
@@ -31,6 +32,7 @@ class SmoothScroll extends React.Component {
 
   componentWillUnmount () {
     window.removeEventListener('scroll', this.onScroll);
+    window.removeEventListener('touchmove', this.onScroll);
     this.ro.disconnect();
   }
 

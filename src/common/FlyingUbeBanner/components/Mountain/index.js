@@ -8,6 +8,18 @@ import styles from './styles.module.scss';
 class Mountain extends PureComponent {
   componentDidMount () {
     const {index} = this.props;
+    gsap.from(this.mountainsleft, 1.5 + index * 0.35, {
+      ease: 'expo.inOut',
+      y: '25%',
+    });
+    gsap.from(this.mountainsright, 1.5 + index * 0.35, {
+      ease: 'expo.inOut',
+      y: '25%',
+    });
+  }
+
+  componentDidUpdate () {
+    const {timeline, index} = this.props;
     gsap.to(this.mountainsright, 15 + index * 10, {
       ease: 'none',
       repeat: -1,
@@ -18,18 +30,6 @@ class Mountain extends PureComponent {
       repeat: -1,
       x: window.innerWidth,
     });
-    gsap.from(this.mountainsleft, 1.5 + index * 0.35, {
-      ease: 'expo.inOut',
-      y: '50%',
-    });
-    gsap.from(this.mountainsright, 1.5 + index * 0.35, {
-      ease: 'expo.inOut',
-      y: '50%',
-    });
-  }
-
-  componentDidUpdate () {
-    const {timeline, index} = this.props;
     if (timeline) {
       timeline.to(this.mountainsright, {
         y: `-${600 - index * 170}px`,

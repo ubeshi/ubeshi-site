@@ -8,7 +8,7 @@ import React, {
 } from 'react';
 import Loader from './assets/loader.gif';
 import HeroBanner from './common/HeroBanner';
-import SmoothScroll from './common/SmoothScroll';
+import locomotiveScroll from './common/LocomotiveScroll';
 import TeamDescriptor from './common/TeamDescriptor';
 import TeamSkills from './common/TeamSkills';
 
@@ -22,6 +22,12 @@ class MainLayout extends PureComponent {
   }
 
   componentDidMount () {
+    locomotiveScroll();
+    this.timeline = gsap.timeline({
+      scrollTrigger: {
+        scrub: 1,
+      },
+    });
     gsap.to(this.loader, 2, {
       ease: 'expo.inOut',
       y: '-100%',
@@ -34,11 +40,6 @@ class MainLayout extends PureComponent {
     });
     setTimeout(() => {
       document.querySelector('.main-layout').classList.remove('is-loading');
-      this.timeline = gsap.timeline({
-        scrollTrigger: {
-          scrub: 1,
-        },
-      });
       window.addEventListener('beforeunload', this.componentCleanup);
       ScrollTrigger.refresh();
       this.forceUpdate();
@@ -75,18 +76,16 @@ class MainLayout extends PureComponent {
             src={Loader}
           />
         </div>
-        <SmoothScroll>
-          <div
-            id='scroll-page' ref={(element) => {
-              this.el = element;
-            }}>
-            <HeroBanner
-              timeline={this.timeline}
-            />
-            <TeamDescriptor />
-            <TeamSkills />
-          </div>
-        </SmoothScroll>
+        <div
+          id='scroll-page' ref={(element) => {
+            this.el = element;
+          }}>
+          <HeroBanner
+            timeline={this.timeline}
+          />
+          <TeamDescriptor />
+          <TeamSkills />
+        </div>
       </div>
     );
   }

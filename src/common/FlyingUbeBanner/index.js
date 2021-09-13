@@ -25,12 +25,6 @@ class FlyingUbeBanner extends PureComponent {
   componentDidMount () {
     gsap.from(this.mascot, 2, {
       onComplete: () => {
-        gsap.to(this.mascot, 1.5, {
-          ease: Power1.easeInOut,
-          repeat: -1,
-          yoyo: true,
-          yPercent: -10,
-        });
         gsap.from(this.cloudone, 5, {
           ease: Power1.easeInOut,
           repeat: -1,
@@ -62,6 +56,12 @@ class FlyingUbeBanner extends PureComponent {
 
   componentDidUpdate () {
     const {timeline} = this.props;
+    gsap.to(this.mascot, 1.5, {
+      ease: Power1.easeInOut,
+      repeat: -1,
+      yoyo: true,
+      yPercent: -10,
+    });
     if (timeline) {
       timeline.to(this.mascot, {
         rotate: 30,
