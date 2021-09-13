@@ -53,7 +53,6 @@ class MainLayout extends PureComponent {
 
   componentCleanup () {
     window.scrollTo(0, 0);
-    ScrollTrigger.refresh();
   }
 
   render () {
