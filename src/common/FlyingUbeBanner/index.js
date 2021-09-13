@@ -50,7 +50,7 @@ class FlyingUbeBanner extends PureComponent {
       },
       rotate: 30,
       x: window.innerWidth,
-      y: '-500px',
+      y: -1 * window.innerHeight / 2,
     });
   }
 
@@ -66,7 +66,7 @@ class FlyingUbeBanner extends PureComponent {
       timeline.to(this.mascot, {
         rotate: 30,
         x: -window.innerWidth,
-        y: '-500px',
+        y: -1 * window.innerHeight / 2,
       }, 0.01);
       timeline.to(this.footerbase, {
         y: '-600px',
