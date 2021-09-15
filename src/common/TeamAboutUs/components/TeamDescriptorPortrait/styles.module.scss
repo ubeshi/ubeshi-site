@@ -1,0 +1,53 @@
+.team-descriptor-portrait {
+  flex: 21% 1;
+  min-width: 300px;
+
+  .team-descriptor-image {
+    height: 300px;
+    background-color: #bdaec5;
+    margin-bottom: 20px;
+    overflow: hidden;
+
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      filter: hue-rotate(220deg) saturate(0);
+      transition: 0.5s;
+      position: center center;
+    }
+
+    img:hover {
+      transition: 0.5s;
+      width: 105%;
+      filter: hue-rotate(220deg) saturate(0.8);
+    }
+  }
+
+  .team-descriptor-portrait-text {
+    font-size: 0.6em;
+    font-weight: 400;
+
+    .team-descriptor-name {
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+
+    .team-descriptor-title {
+      padding-bottom: 10px;
+    }
+
+    .team-descriptor-linkedin a {
+      text-decoration: none;
+      border-bottom: 1px solid #8c7b96;
+      color: #8c7b96;
+      transition: 0.3s;
+    }
+
+    .team-descriptor-linkedin a:hover {
+      transition: 0.3s;
+      color: #c2b3ca;
+      border-bottom: 1px solid #c2b3ca;
+    }
+  }
+}

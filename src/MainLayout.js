@@ -9,8 +9,9 @@ import React, {
 import Loader from './assets/loader.gif';
 import HeroBanner from './common/HeroBanner';
 import locomotiveScroll from './common/LocomotiveScroll';
-import TeamDescriptor from './common/TeamDescriptor';
-import TeamSkills from './common/TeamSkills';
+import TeamAboutUs from './common/TeamAboutUs';
+import TeamContact from './common/TeamContact';
+import TeamMission from './common/TeamDescriptor';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -82,8 +83,9 @@ class MainLayout extends PureComponent {
           <HeroBanner
             timeline={this.timeline}
           />
-          <TeamDescriptor />
-          <TeamSkills />
+          <TeamMission />
+          <TeamAboutUs />
+          <TeamContact />
         </div>
       </div>
     );

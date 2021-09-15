@@ -8,13 +8,13 @@ import styles from './styles.module.scss';
 class Mountain extends PureComponent {
   componentDidMount () {
     const {index} = this.props;
-    gsap.from(this.mountainsleft, 1.5 + index * 0.35, {
+    gsap.from(this.mountainsleft, 1 + index * 0.35, {
       ease: 'expo.inOut',
-      y: '25%',
+      y: `${25 + index * 45}%`,
     });
-    gsap.from(this.mountainsright, 1.5 + index * 0.35, {
+    gsap.from(this.mountainsright, 1 + index * 0.35, {
       ease: 'expo.inOut',
-      y: '25%',
+      y: `${25 + index * 45}%`,
     });
   }
 

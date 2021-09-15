@@ -1,25 +1,37 @@
 .team-skills {
   background-color: #24132b;
-  padding: 200px 10vw;
-  min-height: 30vh;
+  padding: 5vh 10vw 20vh 10vw;
   margin: 0 auto;
 
   .team-skills-title {
+    display: flex;
+    justify-content: space-around;
     font-family: neue-haas-grotesk-display, sans-serif;
     font-weight: 400;
     letter-spacing: 5px;
-    font-size: 0.8em;
+    font-size: 1em;
     color: #bdaec5;
-    margin-bottom: 50px;
+    margin-bottom: 10px;
   }
 
   .team-skills-descriptor {
+    display: flex;
+    justify-content: space-around;
     font-family: neue-haas-grotesk-display, sans-serif;
     font-weight: 600;
     letter-spacing: 2px;
-    color: #bdaec5;
-    font-size: 3em;
+    font-size: 5em;
     margin: 0 auto;
+
+    a {
+      transition: 0.3s;
+      color: #bdaec5;
+    }
+
+    a:hover {
+      transition: 0.3s;
+      color: #ffcaca;
+    }
   }
 }
 

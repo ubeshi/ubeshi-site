@@ -1,3 +1,12 @@
+.hero-background {
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  top: -10%;
+  z-index: -100;
+  background-color: #ffcaca;
+}
+
 .hero-main-image {
   position: absolute;
   height: 30%;

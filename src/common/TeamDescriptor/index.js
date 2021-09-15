@@ -16,7 +16,7 @@ import styles from './styles.module.scss';
 
 gsap.registerPlugin(ScrollTrigger, SplitText);
 
-class TeamDescriptor extends PureComponent {
+class TeamMission extends PureComponent {
   constructor (props) {
     super(props);
     this.animateInDiv = this.animateInDiv.bind(this);
@@ -95,16 +95,16 @@ class TeamDescriptor extends PureComponent {
   }
 }
 
-TeamDescriptor.propTypes = {
+TeamMission.propTypes = {
   timeline: PropTypes.shape({
     to: PropTypes.func,
   }),
 };
 
-TeamDescriptor.defaultProps = {
+TeamMission.defaultProps = {
   timeline: {
     to: () => {},
   },
 };
 
-export default TeamDescriptor;
+export default TeamMission;

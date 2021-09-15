@@ -88,6 +88,7 @@ class FlyingUbeBanner extends PureComponent {
 
     return (
       <>
+        <div className={styles['hero-background']} />
         <img
           alt='Main ube'
           className={styles['hero-main-image']}
