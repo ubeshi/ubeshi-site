@@ -9,9 +9,6 @@ import PropTypes from 'prop-types';
 import {
   PureComponent,
 } from 'react';
-import {
-  InView,
-} from 'react-intersection-observer';
 import portraitOne from '../../assets/portrait-1.jpg';
 import portraitTwo from '../../assets/portrait-2.jpg';
 import portraitThree from '../../assets/portrait-3.jpg';
