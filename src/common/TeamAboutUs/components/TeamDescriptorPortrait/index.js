@@ -14,14 +14,48 @@ import styles from './styles.module.scss';
 gsap.registerPlugin(ScrollTrigger, SplitText);
 
 class TeamDescriptorPortrait extends PureComponent {
+  constructor (props) {
+    super(props);
+    this.handleMouseEnter = this.handleMouseEnter.bind(this);
+    this.handleMouseLeave = this.handleMouseLeave.bind(this);
+  }
+
+  componentDidMount () {
+    gsap.set(this.animatedinnerimage, {
+      backgroundPosition: 'center',
+      backgroundSize: '100% auto',
+      filter: 'hue-rotate(220deg) grayscale(100%)',
+    });
+  }
+
+  handleMouseEnter () {
+    gsap.to(this.animatedinnerimage, 0.5, {
+      backgroundSize: '110% auto',
+      filter: 'hue-rotate(220deg)',
+    });
+  }
+
+  handleMouseLeave () {
+    gsap.to(this.animatedinnerimage, 0.5, {
+      backgroundSize: '100% auto',
+      filter: 'hue-rotate(220deg) grayscale(100%)',
+    });
+  }
+
   render () {
     const {img, name, title, linkedin, github} = this.props;
 
     return (
       <div className={styles['team-descriptor-portrait']}>
-        <div className={styles['team-descriptor-image']}>
-          <img alt={`Portrait for ${name}`} src={img} />
-        </div>
+        <div
+          className={styles['team-descriptor-image']}
+          onMouseEnter={this.handleMouseEnter}
+          onMouseLeave={this.handleMouseLeave}
+          ref={(element) => {
+            this.animatedinnerimage = element;
+          }}
+          style={{backgroundImage: `url(${img})`}}
+        />
         <div className={styles['team-descriptor-portrait-text']}>
           <div className={styles['team-descriptor-name']}>
             {name}
