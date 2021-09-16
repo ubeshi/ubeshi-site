@@ -33,24 +33,28 @@ class TeamAboutUs extends PureComponent {
           </div>
           <div className={styles['team-descriptor-portraits']}>
             <TeamDescriptorPortrait
+              github='https://github.com/adaj-1'
               img={portraitOne}
               linkedin='https://www.linkedin.com/in/jada-li'
               name='Jada Li'
               title='Professional Person'
             />
             <TeamDescriptorPortrait
+              github='https://github.com/brydenli'
               img={portraitTwo}
               linkedin='https://www.linkedin.com/in/bryden-li/'
               name='Bryden Li'
               title='Professional Person'
             />
             <TeamDescriptorPortrait
+              github='https://github.com/ColinT'
               img={portraitThree}
               linkedin='https://www.linkedin.com/in/colin-tong-07b824143/'
               name='Colin Tong'
               title='Professional Person'
             />
             <TeamDescriptorPortrait
+              github='https://github.com/anson-li'
               img={portraitFour}
               linkedin='https://www.linkedin.com/in/anson-ii/'
               name='Anson Li'

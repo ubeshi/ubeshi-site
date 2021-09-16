@@ -15,7 +15,7 @@ gsap.registerPlugin(ScrollTrigger, SplitText);
 
 class TeamDescriptorPortrait extends PureComponent {
   render () {
-    const {img, name, title, linkedin} = this.props;
+    const {img, name, title, linkedin, github} = this.props;
 
     return (
       <div className={styles['team-descriptor-portrait']}>
@@ -29,8 +29,9 @@ class TeamDescriptorPortrait extends PureComponent {
           <div className={styles['team-descriptor-title']}>
             {title}
           </div>
-          <div className={styles['team-descriptor-linkedin']}>
-            <a href={linkedin}>LinkedIn</a>
+          <div className={styles['team-descriptor-connect']}>
+            <a className={styles['team-descriptor-linkedin']} href={linkedin}>LinkedIn</a>
+            <a className={styles['team-descriptor-github']} href={github}>Github</a>
           </div>
         </div>
       </div>
@@ -39,6 +40,7 @@ class TeamDescriptorPortrait extends PureComponent {
 }
 
 TeamDescriptorPortrait.propTypes = {
+  github: PropTypes.string.isRequired,
   img: PropTypes.string.isRequired,
   linkedin: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
