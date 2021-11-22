@@ -1,0 +1,115 @@
+.team-work {
+  padding: 15vh 10vw;
+  font-size: 1.5em;
+  letter-spacing: 2px;
+  font-family: neue-haas-grotesk-display, sans-serif;
+  font-weight: 100;
+  font-style: normal;
+  background-color: #24132b;
+  color: #bdaec5;
+  z-index: 100;
+
+  .team-work-content {
+    width: 100%;
+    padding-bottom: 200px;
+    border-bottom: 1px #bdaec5 solid;
+
+    .team-work-title {
+      font-weight: 600;
+      font-size: 4em;
+      line-height: 0.8em;
+      display: flex;
+      justify-content: space-around;
+      width: 100%;
+      padding-bottom: 150px;
+    }
+  }
+
+  .team-work-repos {
+    display: flex;
+    // justify-content: space-between;
+    flex-direction: column;
+    gap: 50px;
+    align-items: center;
+
+    .team-work-repo {
+      text-decoration: none;
+      color: #bdaec5;
+      text-align: center;
+
+      .team-work-repo-title {
+        font-size: 2em;
+        font-weight: 600;
+        text-transform: capitalize;
+        padding-bottom: 5px;
+      }
+      
+      .team-work-repo-title {
+        display: inline-block;
+        position: relative;
+        transition: 0.5s;
+      }
+
+      @media screen and (max-width: 800px) {
+        .team-work-repo-title {
+          font-size: 1em;
+        }
+      }
+    
+      .team-work-repo-title:hover {
+        text-decoration: none;
+        color: #ff8180;
+        transform: scale(105%);
+        // transform: rotate(5deg);
+      }
+    
+      // .team-work-repo-title:after {
+      //     content: '';
+      //     position: absolute;
+      //     display: block;
+      //     width: 0%;
+      //     height: 20px;
+      //     margin-top: -0.8em;
+      //     background: rgba(255, 241, 255, 0.9);
+      //     transform-origin: center left;
+      //     transition: 0.25s ease;
+      //     left: -0.3em;
+      // }
+    
+      // .team-work-repo-title:hover:after {
+      //     width: 110%;
+      // }
+
+      .team-work-repo-description, .team-work-repo-updated {
+        font-size: 0.6em;
+        font-weight: 400;
+      }
+
+      .team-work-repo-updated {
+        color: #8a808f;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  .team-work .team-work-content {
+    flex-direction: column;
+
+    .team-work-title {
+      font-size: 2em;
+      padding-bottom: 50px;
+    }
+
+    .upper-paragraph {
+      font-size: 0.8em;
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .team-work .team-work-content .upper-paragraph {
+    padding-left: 0;
+    width: 90%;
+  }
+}

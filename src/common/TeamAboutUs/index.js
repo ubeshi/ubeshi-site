@@ -13,6 +13,7 @@ import portraitOne from '../../assets/portrait-1.jpg';
 import portraitTwo from '../../assets/portrait-2.jpg';
 import portraitThree from '../../assets/portrait-3.jpg';
 import portraitFour from '../../assets/portrait-4.jpg';
+import portraitFive from '../../assets/portrait-5.jpg';
 import TeamDescriptorPortrait from './components/TeamDescriptorPortrait';
 import styles from './styles.module.scss';
 
@@ -33,17 +34,24 @@ class TeamAboutUs extends PureComponent {
           </div>
           <div className={styles['team-descriptor-portraits']}>
             <TeamDescriptorPortrait
-              github='https://github.com/adaj-1'
-              img={portraitOne}
-              linkedin='https://www.linkedin.com/in/jada-li'
-              name='Jada Li'
-              title='Professional Person'
-            />
-            <TeamDescriptorPortrait
               github='https://github.com/brydenli'
               img={portraitTwo}
               linkedin='https://www.linkedin.com/in/bryden-li/'
               name='Bryden Li'
+              title='Professional Person'
+            />
+            <TeamDescriptorPortrait
+              github='https://github.com/ninjaturtIe'
+              img={portraitFive}
+              linkedin='https://www.linkedin.com/in/edwin-li-15445189/'
+              name='Edwin Li'
+              title='Professional Person'
+            />
+            <TeamDescriptorPortrait
+              github='https://github.com/adaj-1'
+              img={portraitOne}
+              linkedin='https://www.linkedin.com/in/jada-li'
+              name='Jada Li'
               title='Professional Person'
             />
             <TeamDescriptorPortrait

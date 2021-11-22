@@ -15,12 +15,12 @@ export default function locomotiveScroll () {
     el: scrollEl,
     lerp: 0.075,
     mobile: {
-      smooth: true,
+      smooth: false,
     },
     multiplier: 0.9,
-    smooth: true,
+    smooth: false,
     tablet: {
-      smooth: true,
+      smooth: false,
     },
   });
 

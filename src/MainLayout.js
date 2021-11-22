@@ -12,6 +12,7 @@ import locomotiveScroll from './common/LocomotiveScroll';
 import TeamAboutUs from './common/TeamAboutUs';
 import TeamContact from './common/TeamContact';
 import TeamMission from './common/TeamDescriptor';
+import TeamWork from './common/TeamWork';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -85,6 +86,7 @@ class MainLayout extends PureComponent {
           />
           <TeamMission />
           <TeamAboutUs />
+          <TeamWork />
           <TeamContact />
         </div>
       </div>
