@@ -43,7 +43,7 @@
         text-transform: capitalize;
         padding-bottom: 5px;
       }
-      
+
       .team-work-repo-title {
         display: inline-block;
         position: relative;
@@ -55,32 +55,32 @@
           font-size: 1em;
         }
       }
-    
+
       .team-work-repo-title:hover {
         text-decoration: none;
         color: #ff8180;
-        transform: scale(105%);
         // transform: rotate(5deg);
       }
-    
-      // .team-work-repo-title:after {
-      //     content: '';
-      //     position: absolute;
-      //     display: block;
-      //     width: 0%;
-      //     height: 20px;
-      //     margin-top: -0.8em;
-      //     background: rgba(255, 241, 255, 0.9);
-      //     transform-origin: center left;
-      //     transition: 0.25s ease;
-      //     left: -0.3em;
-      // }
-    
-      // .team-work-repo-title:hover:after {
-      //     width: 110%;
-      // }
 
-      .team-work-repo-description, .team-work-repo-updated {
+      .team-work-repo-title:after {
+        content: '';
+        position: absolute;
+        display: block;
+        width: 0%;
+        height: 20px;
+        margin-top: -0.8em;
+        background: #ff8180;
+        transform-origin: center left;
+        transition: 0.25s ease;
+        left: -0.3em;
+      }
+
+      .team-work-repo-title:hover:after {
+        width: 110%;
+      }
+
+      .team-work-repo-description,
+      .team-work-repo-updated {
         font-size: 0.6em;
         font-weight: 400;
       }

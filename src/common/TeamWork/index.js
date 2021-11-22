@@ -37,11 +37,11 @@ class TeamWork extends PureComponent {
         <div className={styles['team-work-repo-title']}>
           {repo.name.split('-').join(' ')}
         </div>
-        {repo.description ? (
+        {repo.description ?
           <div className={styles['team-work-repo-description']}>
             {repo.description}
-          </div>
-        ) : null}
+          </div> :
+          null}
         <div className={styles['team-work-repo-updated']}>
           Last updated {moment(repo.updated_at).format('MMMM YYYY')}.
         </div>
