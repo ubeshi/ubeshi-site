@@ -21,6 +21,7 @@ class MainLayout extends PureComponent {
     super(props);
     this.timeline = null;
     this.componentCleanup = this.componentCleanup.bind(this);
+    this.animateInDiv = this.animateInDiv.bind(this);
   }
 
   componentDidMount () {
@@ -55,6 +56,18 @@ class MainLayout extends PureComponent {
 
   componentCleanup () {
     window.scrollTo(0, 0);
+  }
+
+  animateInDiv (inView, entry) {
+    if (inView) {
+      gsap.to(entry.target, 0.5, {
+        color: '#ff8180',
+      });
+    } else {
+      gsap.to(entry.target, 0.5, {
+        color: '#bdaec5',
+      });
+    }
   }
 
   render () {

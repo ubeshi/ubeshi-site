@@ -10,6 +10,10 @@ import PropTypes from 'prop-types';
 import {
   PureComponent,
 } from 'react';
+import {
+  InView,
+} from 'react-intersection-observer';
+import TeamImage from '../../assets/work-image.jpg';
 import styles from './styles.module.scss';
 
 gsap.registerPlugin(ScrollTrigger, SplitText);
@@ -20,6 +24,7 @@ class TeamWork extends PureComponent {
     this.state = {
       repos: [],
     };
+    this.compareUpdatedAt = this.compareUpdatedAt.bind(this);
   }
 
   async componentDidMount () {
@@ -28,7 +33,18 @@ class TeamWork extends PureComponent {
     );
     const json = await response.json();
     // eslint-disable-next-line react/no-did-mount-set-state
-    this.setState({repos: json});
+    this.setState({repos: json.sort(this.compareUpdatedAt)});
+  }
+
+  compareUpdatedAt (a, b) {
+    if (moment(a.updated_at) < moment(b.updated_at)) {
+      return 1;
+    }
+    if (moment(a.updated_at) > moment(b.updated_at)) {
+      return -1;
+    }
+
+    return 0;
   }
 
   render () {
@@ -47,19 +63,33 @@ class TeamWork extends PureComponent {
         </div>
       </a>;
     });
+    const {animateInDiv} = this.props;
 
     return (
       <div className={styles['team-work']}>
         <div className={styles['team-work-content']}>
           <div className={styles['team-work-title']}>
-            <div
-              className={styles['team-work-title-text']}
-            >
-              Latest Work
-            </div>
+            <InView
+              as='div' className={styles['team-work-title-text']} delay={100}
+              onChange={(inView, entry) => {
+                return animateInDiv(inView, entry);
+              }}>
+              Our Projects
+            </InView>
           </div>
-          <div className={styles['team-work-repos']}>
-            {repos}
+          <div className={styles['team-work-title-body']}>
+            <div className={styles['team-work-repos']}>
+              {repos}
+            </div>
+            <div className={styles['team-work-image']}>
+              <img
+                alt='An awesome recollection of our work.'
+                ref={(element) => {
+                  this.image = element;
+                }}
+                src={TeamImage}
+              />
+            </div>
           </div>
         </div>
       </div>
@@ -68,12 +98,14 @@ class TeamWork extends PureComponent {
 }
 
 TeamWork.propTypes = {
+  animateInDiv: PropTypes.func,
   timeline: PropTypes.shape({
     to: PropTypes.func,
   }),
 };
 
 TeamWork.defaultProps = {
+  animateInDiv: (inView, entry) => {},
   timeline: {
     to: () => {},
   },
