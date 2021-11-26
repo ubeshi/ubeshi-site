@@ -8,7 +8,6 @@ import React, {
 } from 'react';
 import Loader from './assets/loader.gif';
 import HeroBanner from './common/HeroBanner';
-import locomotiveScroll from './common/LocomotiveScroll';
 import TeamAboutUs from './common/TeamAboutUs';
 import TeamContact from './common/TeamContact';
 import TeamMission from './common/TeamDescriptor';
@@ -25,7 +24,6 @@ class MainLayout extends PureComponent {
   }
 
   componentDidMount () {
-    locomotiveScroll();
     this.timeline = gsap.timeline({
       scrollTrigger: {
         scrub: 1,

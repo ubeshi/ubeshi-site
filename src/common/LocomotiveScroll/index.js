@@ -18,7 +18,7 @@ export default function locomotiveScroll () {
       smooth: false,
     },
     multiplier: 0.9,
-    smooth: false,
+    smooth: true,
     tablet: {
       smooth: false,
     },
