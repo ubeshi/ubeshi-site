@@ -31,6 +31,7 @@ class MainLayout extends PureComponent {
     });
     gsap.to(this.loader, 2, {
       ease: 'expo.inOut',
+      rotation: 0.01,
       y: '-100%',
     });
     gsap.set(this.loader, {

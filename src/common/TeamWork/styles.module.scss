@@ -111,13 +111,25 @@
 @media screen and (max-width: 1400px) {
   .team-work .team-work-content {
     flex-direction: column;
+    padding: 0;
 
     .team-work-repos {
       justify-content: center;
+      flex-basis: 100%;
+      margin-bottom: 100px;
 
       .team-work-repo {
         text-align: center;
         max-width: 100%;
+
+        .team-work-repo-title {
+          font-size: 0.9em;
+        }
+
+        .team-work-repo-description,
+        .team-work-repo-updated {
+          font-size: 0.5em;
+        }
       }
     }
 

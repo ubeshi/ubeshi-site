@@ -10,10 +10,12 @@ class Mountain extends PureComponent {
     const {index} = this.props;
     gsap.from(this.mountainsleft, 1 + index * 0.35, {
       ease: 'expo.inOut',
+      rotation: 0.01,
       y: `${25 + index * 45}%`,
     });
     gsap.from(this.mountainsright, 1 + index * 0.35, {
       ease: 'expo.inOut',
+      rotation: 0.01,
       y: `${25 + index * 45}%`,
     });
   }
@@ -23,11 +25,13 @@ class Mountain extends PureComponent {
     gsap.to(this.mountainsright, 15 + index * 10, {
       ease: 'none',
       repeat: -1,
+      rotation: 0.01,
       x: window.innerWidth,
     });
     gsap.to(this.mountainsleft, 15 + index * 10, {
       ease: 'none',
       repeat: -1,
+      rotation: 0.01,
       x: window.innerWidth,
     });
     if (timeline) {

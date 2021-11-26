@@ -40,11 +40,13 @@ class FlyingUbeBanner extends PureComponent {
         gsap.to(this.cloudone, 10, {
           ease: 'none',
           repeat: -1,
+          rotation: 0.01,
           x: 3 * window.innerWidth,
         });
         gsap.to(this.cloudtwo, 8, {
           ease: 'none',
           repeat: -1,
+          rotation: 0.01,
           x: 3 * window.innerWidth,
         });
       },
