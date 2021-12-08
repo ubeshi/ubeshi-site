@@ -100,7 +100,7 @@ class ThreeJS extends PureComponent {
     this.mainScene = new Scene();
 
     this.mainCamera = new PerspectiveCamera(
-      40,
+      35,
       2,
       1,
       1000,
@@ -115,7 +115,7 @@ class ThreeJS extends PureComponent {
     this.mainScene.add(this.backLight);
 
     this.fillLight = new PointLight(0xbdaec5, 0.7, 20);
-    this.fillLight.position.set(5, 0, 5);
+    this.fillLight.position.set(1, 0, 5);
     this.mainScene.add(this.fillLight);
 
     this.keyLight = new PointLight(0xbdaec5, 2, 20);
@@ -158,8 +158,8 @@ class ThreeJS extends PureComponent {
     tFont.magFilter = NearestFilter;
 
     // Calculate render target and setup first pass
-    this.fontMapSize = new Vector2(256, 256);
-    this.fontCharSize = new Vector2(16, 16);
+    this.fontMapSize = new Vector2(64, 64);
+    this.fontCharSize = new Vector2(8, 8);
     const startingSizeData = this.getLowResSize();
 
     // Should match whatever was set in updateAsciiRenderSize
@@ -175,8 +175,8 @@ class ThreeJS extends PureComponent {
     this.asciiPass = new ShaderPass(AsciiShader());
     this.asciiPass.uniforms.tLowRes.value = this.lowResRenderTarget.texture;
     this.asciiPass.uniforms.tDepth.value = lowResDepthTexture;
-    this.asciiPass.uniforms.cameraNear.value = 1;
-    this.asciiPass.uniforms.cameraFar.value = 8;
+    this.asciiPass.uniforms.cameraNear.value = 5;
+    this.asciiPass.uniforms.cameraFar.value = 18;
     this.asciiPass.uniforms.tFont.value = tFont;
 
     // Precalculate render values
@@ -195,6 +195,7 @@ class ThreeJS extends PureComponent {
     this.clock = new Clock();
     this.modelContainer.rotation.x = Math.PI / 12;
     this.modelContainer.rotation.y = -Math.PI / 3;
+    this.modelContainer.rotation.z = Math.PI / 12;
 
     window.addEventListener('mousemove', this.mousemove);
     window.addEventListener('resize', this.resizeRenderer);
@@ -225,6 +226,8 @@ class ThreeJS extends PureComponent {
       this.mixer.update(delta);
     }
     this.resizeCanvasToDisplaySize();
+
+    this.modelContainer.rotation.z += 0.001;
 
     this.renderer.setRenderTarget(this.lowResRenderTarget);
     this.renderer.render(this.mainScene, this.mainCamera);
