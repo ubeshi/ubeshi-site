@@ -1,0 +1,9 @@
+canvas {
+  position: absolute;
+  max-width: 100vw;
+  max-height: 140vh;
+  left: 15vw;
+  z-index: 0;
+  /* top: -200px; */
+  /* background: linear-gradient(to bottom,  #ce7739 0%,#ff8180 100%); */
+}

@@ -13,8 +13,9 @@ import {
 import {
   InView,
 } from 'react-intersection-observer';
-import TeamImage from '../../assets/work-image.jpg';
+import ThreeJS from './ThreeJS';
 import styles from './styles.module.scss';
+import './styles.css';
 
 gsap.registerPlugin(ScrollTrigger, SplitText);
 
@@ -81,14 +82,8 @@ class TeamWork extends PureComponent {
             <div className={styles['team-work-repos']}>
               {repos}
             </div>
-            <div className={styles['team-work-image']}>
-              <img
-                alt='An awesome recollection of our work.'
-                ref={(element) => {
-                  this.image = element;
-                }}
-                src={TeamImage}
-              />
+            <div className={styles['team-work-image']} id='team-work-image'>
+              <ThreeJS />
             </div>
           </div>
         </div>
