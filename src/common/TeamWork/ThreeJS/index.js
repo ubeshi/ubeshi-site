@@ -14,9 +14,6 @@ import {
   EffectComposer,
 } from 'three/examples/jsm/postprocessing/EffectComposer';
 import {
-  RenderPass,
-} from 'three/examples/jsm/postprocessing/RenderPass';
-import {
   ShaderPass,
 } from 'three/examples/jsm/postprocessing/ShaderPass';
 import fontFile from '../../../assets/font2.png';
@@ -190,6 +187,7 @@ class ThreeJS extends PureComponent {
     this.updateAsciiRenderSize();
 
     this.finalComposer.addPass(this.asciiPass);
+
     // this.finalComposer.addPass(new RenderPass(this.mainScene, this.mainCamera));
 
     this.clock = new Clock();

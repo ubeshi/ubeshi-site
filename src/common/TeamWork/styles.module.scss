@@ -29,7 +29,7 @@
   .team-work-title-body {
     display: flex;
     justify-content: space-around;
-    gap: 0px;
+    gap: 0;
   }
 
   .team-work-repos {
@@ -47,7 +47,7 @@
       text-align: left;
       width: 100%;
       flex-basis: 100%;
-      padding: 30px 0px 0px 0px;
+      padding: 30px 0 0 0;
 
       .team-work-repo-title {
         font-size: 2em;
