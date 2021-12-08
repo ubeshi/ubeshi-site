@@ -48,6 +48,9 @@ const AsciiShader = () => {
         floor(charIndex * fontCharSize.x) * fontCharSize.y
       );
       
+      color.r = color.r + 0.2;
+      color.g = color.g + 0.1;
+      color.b = color.b + 0.3;
       gl_FragColor = texture2D(tFont, fontuv) * color;
     }
   `,

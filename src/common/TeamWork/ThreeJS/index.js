@@ -158,8 +158,8 @@ class ThreeJS extends PureComponent {
     tFont.magFilter = NearestFilter;
 
     // Calculate render target and setup first pass
-    this.fontMapSize = new Vector2(32, 32);
-    this.fontCharSize = new Vector2(8, 8);
+    this.fontMapSize = new Vector2(256, 256);
+    this.fontCharSize = new Vector2(16, 16);
     const startingSizeData = this.getLowResSize();
 
     // Should match whatever was set in updateAsciiRenderSize
@@ -176,7 +176,7 @@ class ThreeJS extends PureComponent {
     this.asciiPass.uniforms.tLowRes.value = this.lowResRenderTarget.texture;
     this.asciiPass.uniforms.tDepth.value = lowResDepthTexture;
     this.asciiPass.uniforms.cameraNear.value = 1;
-    this.asciiPass.uniforms.cameraFar.value = 160;
+    this.asciiPass.uniforms.cameraFar.value = 8;
     this.asciiPass.uniforms.tFont.value = tFont;
 
     // Precalculate render values
