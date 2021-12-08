@@ -100,7 +100,7 @@ class ThreeJS extends PureComponent {
     this.mainScene = new Scene();
 
     this.mainCamera = new PerspectiveCamera(
-      35,
+      45,
       2,
       1,
       1000,
@@ -227,7 +227,7 @@ class ThreeJS extends PureComponent {
     }
     this.resizeCanvasToDisplaySize();
 
-    this.modelContainer.rotation.z += 0.001;
+    this.modelContainer.rotation.z += 0.005;
 
     this.renderer.setRenderTarget(this.lowResRenderTarget);
     this.renderer.render(this.mainScene, this.mainCamera);
