@@ -13,7 +13,6 @@ import portraitOne from '../../assets/portrait-1.jpg';
 import portraitTwo from '../../assets/portrait-2.jpg';
 import portraitThree from '../../assets/portrait-3.jpg';
 import portraitFour from '../../assets/portrait-4.jpg';
-import portraitFive from '../../assets/portrait-5.jpg';
 import TeamDescriptorPortrait from './components/TeamDescriptorPortrait';
 import styles from './styles.module.scss';
 
