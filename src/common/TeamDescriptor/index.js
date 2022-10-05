@@ -85,7 +85,7 @@ class TeamMission extends PureComponent {
               </div>
               <div>&#x200b;</div>
               <div>
-                Our mission directive is simple: get Jada a job.
+                Our mission directive is simple: explore the vastness of software and technology.
               </div>
             </InView>
           </div>
