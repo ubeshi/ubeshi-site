@@ -34,7 +34,7 @@ class TeamWork extends PureComponent {
     );
     const json = await response.json();
     // eslint-disable-next-line react/no-did-mount-set-state
-    this.setState({repos: json.sort(this.compareUpdatedAt)});
+    this.setState({repos: json.sort(this.compareUpdatedAt).slice(0, 5)});
   }
 
   compareUpdatedAt (a, b) {
@@ -75,8 +75,13 @@ class TeamWork extends PureComponent {
               onChange={(inView, entry) => {
                 return animateInDiv(inView, entry);
               }}>
-              Our Projects
+              Recent Projects
             </InView>
+            <div className={styles['team-work-title-link']}>
+              <span>
+                Want to see our full portfolio? Check out our <a href='https://github.com/ubeshi'>Github</a>.
+              </span>
+            </div>
           </div>
           <div className={styles['team-work-title-body']}>
             <div className={styles['team-work-repos']}>

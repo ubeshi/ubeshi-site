@@ -28,7 +28,7 @@ class TeamAboutUs extends PureComponent {
             <div
               className={styles['team-descriptor-title-text']}
             >
-              Meet the<br />Creative Team
+              Meet the Team
             </div>
             <></>
           </div>
@@ -38,13 +38,6 @@ class TeamAboutUs extends PureComponent {
               img={portraitTwo}
               linkedin='https://www.linkedin.com/in/bryden-li/'
               name='Bryden Li'
-              title='Professional Person'
-            />
-            <TeamDescriptorPortrait
-              github='https://github.com/ninjaturtIe'
-              img={portraitFive}
-              linkedin='https://www.linkedin.com/in/edwin-li-15445189/'
-              name='Edwin Li'
               title='Professional Person'
             />
             <TeamDescriptorPortrait

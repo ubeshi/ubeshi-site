@@ -12,17 +12,35 @@
 
   .team-work-content {
     width: 100%;
-    padding: 0 10% 200px 10%;
+    padding: 0 10% 100px 10%;
     border-bottom: 1px #bdaec5 solid;
 
     .team-work-title {
-      font-weight: 600;
-      font-size: 4em;
-      line-height: 0.8em;
+      text-align: center;
       display: flex;
-      justify-content: space-around;
+      flex-direction: column;
       width: 100%;
       padding-bottom: 0;
+      
+      .team-work-title-text {
+        font-weight: 600;
+        font-size: 4em;  
+      }
+
+      .team-work-title-link {
+        font-size: 0.8em;
+        font-weight: 400;
+
+        a {
+          transition: 0.3s;
+          color: #bdaec5;
+        }
+    
+        a:hover {
+          transition: 0.3s;
+          color: #ff8180;
+        }
+      }
     }
   }
 
