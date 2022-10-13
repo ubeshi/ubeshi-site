@@ -150,6 +150,22 @@
     .team-work-title {
       font-size: 2em;
       padding-bottom: 50px;
+      
+      .team-work-title-text {
+        font-size: 0.8em;
+      }
+
+      .team-work-title-link {
+        font-size: 0.3em;
+      }
+    }
+
+    .team-work-title-body {
+      padding-bottom: 0;
+
+      .team-work-repos {
+        margin-top: 0;
+      }
     }
 
     .upper-paragraph {
@@ -167,4 +183,5 @@
     padding-left: 0;
     width: 90%;
   }
+
 }
