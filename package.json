@@ -22,7 +22,7 @@
     "react-intersection-observer": "^8.32.3",
     "react-locomotive-scroll": "^0.1.8",
     "react-router-dom": "^5.2.0",
-    "react-scripts": "4.0.3",
+    "react-scripts": "5.0.1",
     "sass": "^1.35.2",
     "three": "^0.135.0",
     "web-vitals": "^1.1.2",
