@@ -1,4 +1,12 @@
-runtime: nodejs20
+runtime: nodejs22
+env: standard
+
+instance_class: F1
+automatic_scaling:
+  max_instances: 2
+
+entrypoint: node -e ""
+
 handlers:
 - url: /
   static_files: build/index.html
