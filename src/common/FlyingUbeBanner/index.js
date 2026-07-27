@@ -1,5 +1,5 @@
-import gsap, {
-  Power1,
+import {
+  gsap, Power1,
 } from 'gsap';
 import PropTypes from 'prop-types';
 import React, {
