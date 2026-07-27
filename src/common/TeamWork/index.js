@@ -1,4 +1,4 @@
-import gsap from 'gsap';
+import { gsap } from 'gsap';
 import {
   ScrollTrigger,
 } from 'gsap/ScrollTrigger';
@@ -33,7 +33,6 @@ class TeamWork extends PureComponent {
       'https://api.github.com/orgs/ubeshi/repos',
     );
     const json = await response.json();
-    // eslint-disable-next-line react/no-did-mount-set-state
     this.setState({repos: json.sort(this.compareUpdatedAt).slice(0, 5)});
   }
 

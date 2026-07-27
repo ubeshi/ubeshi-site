@@ -42,11 +42,7 @@
     "extends": [
       "react-app",
       "react-app/jest"
-    ],
-    "rules": {
-      "import/no-named-as-default": "off",
-      "eslint-comments/no-unused-disable": "off"
-    }
+    ]
   },
   "browserslist": {
     "production": [

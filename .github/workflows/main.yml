@@ -28,8 +28,6 @@ jobs:
 
       - name: Build
         run: npm run build
-        env:
-          CI: false
 
       - name: Deploy to App Engine
         if: github.ref == 'refs/heads/main' && github.event_name == 'push'

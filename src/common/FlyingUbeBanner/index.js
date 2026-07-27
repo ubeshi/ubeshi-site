@@ -1,6 +1,4 @@
-import gsap, {
-  Power1,
-} from 'gsap';
+import { gsap, Power1 } from 'gsap';
 import PropTypes from 'prop-types';
 import React, {
   PureComponent,
