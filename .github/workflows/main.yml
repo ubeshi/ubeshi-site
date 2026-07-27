@@ -29,6 +29,12 @@ jobs:
       - name: Build
         run: npm run build
 
+      - name: Authenticate to Google Cloud
+        if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+        uses: google-github-actions/auth@v2
+        with:
+          credentials_json: ${{ secrets.GCP_CREDENTIALS }}
+
       - name: Deploy to App Engine
         if: github.ref == 'refs/heads/main' && github.event_name == 'push'
         uses: google-github-actions/deploy-appengine@v2
@@ -36,4 +42,3 @@ jobs:
           deliverables: app.yaml
           version: v1
           project_id: ${{ secrets.GCP_PROJECT }}
-          credentials: ${{ secrets.GCP_CREDENTIALS }}
